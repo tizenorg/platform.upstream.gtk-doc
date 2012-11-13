@@ -10,7 +10,7 @@ BuildRequires:  docbook-xsl-stylesheets
 BuildRequires:  libxml2-tools
 BuildRequires:  libxslt
 BuildRequires:  pkg-config
-BuildRequires:  python-base
+BuildRequires:  python
 BuildRequires:  sgml-skel
 BuildRequires:  xsltproc
 Requires:       docbook-xsl-stylesheets
