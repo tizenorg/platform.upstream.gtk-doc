@@ -7,15 +7,15 @@
 <!ENTITY FDLlink "<link linkend='fdl'>included</link>">
 ]>
 <!-- =============Document Header ============================= -->
-<book id="index" lang="gu">
+<book id="index" lang="te">
   <bookinfo>
-    <title>GTK-Doc પુસ્તિકા</title>
-    <edition>1.18</edition>
-    <abstract role="description"><para>GTK-Doc વપરાશની સૂચનાઓ સાથે ડેવલપરો માટે વપરાશકર્તા પુસ્તિકા.</para></abstract>
+    <title>GTK-Doc మాన్యుయల్</title>
+    <edition>1.18.1</edition>
+    <abstract role="description"><para>GTK-Doc వినియోగపు సూచనలతో అభివృద్దికారుల కొరకు వినియోగదారి మాన్యుయల్.</para></abstract>
     <authorgroup>
       <author>
-        <firstname>ક્રીસ</firstname>
-        <surname>લિટ્લે</surname>
+        <firstname>Chris</firstname>
+        <surname>Lyttle</surname>
         <affiliation>
           <address>
             <email>chris@wilddev.net</email>
@@ -24,7 +24,7 @@
       </author>
       <author>
         <firstname>Dan</firstname>
-        <surname>મૂએથ</surname>
+        <surname>Mueth</surname>
         <affiliation>
           <address>
             <email>d-mueth@uchicago.edu</email>
@@ -32,8 +32,8 @@
         </affiliation>
       </author>
       <author>
-        <firstname>સ્ટેફાન</firstname>
-        <surname>કોસ્ટ</surname>
+        <firstname>Stefan</firstname>
+        <surname>Kost</surname>
         <affiliation>
           <address>
             <email>ensonic@users.sf.net</email>
@@ -42,7 +42,7 @@
       </author>
     </authorgroup>
     <publisher role="maintainer">
-      <publishername>GTK-Doc પ્રોજેક્ટ</publishername>
+      <publishername>GTK-Doc project</publishername>
       <address><email>gtk-doc-list@gnome.org</email></address>
     </publisher>
     <copyright>
@@ -62,21 +62,21 @@
     -->
 
     <legalnotice>
-      <para>Permission is granted to copy, distribute and/or modify this document under the terms of the <citetitle>GNU Free Documentation License</citetitle>, Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is <link linkend="fdl">included</link>.</para>
-      <para>Many of the names used by companies to distinguish their products and services are claimed as trademarks. Where those names appear in any GNOME documentation, and those trademarks are made aware to the members of the GNOME Documentation Project, the names have been printed in caps or initial caps.</para>
+      <para>ఎటువంటి ఫ్రంట్-కవర్ పాఠ్యములు, మరియు బ్యాక్-కవర్ పాఠ్యములు లేకుండా, ఫ్రీ సాఫ్టువేరు ఫౌండేషన్ ద్వారా ప్రచురితమైన వర్షన్ 1.1 లేదా దాని తర్వాత వర్షన్‌ <citetitle>GNU Free Documentation License</citetitle> నియమాలకు లోబడి ఈ పత్రమును నకలు తీయుటకు, పంపిణీ చేయుటకు మరియు/లేదా సవరించుటకు అనుమతి యివ్వబడింది. లైసెన్సు యొక్క నకలు <link linkend="fdl">చేర్చబడింది</link>.న్ ద్వారా ప్రచురితమై,</para>
+      <para>కంపెనీలు వాటి వుత్పత్తులను మరియు సేవలను వర్గీకరించుటకు వుపయోగించు చాలా వరకు నామములు ట్రేడ్‌మార్కులుగా హక్కు కలిగివుంటాయి. అవి GNOME పత్రికీకరణనందు కనిపించునప్పుడు, మరియు GNOME Documentation Project సభ్యలు ఆ ట్రేడ్‌మార్కులను గుర్తించుటకు, ఆనామములు పెద్ద అక్షరములలో లేదా మొదటి అక్షరం పెద్ద అక్షరంగా ముద్రించబడతాయి.</para>
     </legalnotice>
 
     <revhistory>
-      <!--revision>
-        <revnumber>1.18.1</revnumber>
-        <date>15 Sep 2011</date>
-        <authorinitials>sk</authorinitials>
-        <revremark>development version, markdown support</revremark>
-      </revision-->
+      <revision>
+        <revnumber>1.19</revnumber>
+        <date>05 Jun 2013</date>
+        <authorinitials>ss</authorinitials>
+        <revremark>bug fixes</revremark>
+      </revision>
       <revision>
         <revnumber>1.18</revnumber>
-        <date>14 sep 2011</date>
-        <authorinitials>sk</authorinitials>
+        <date>14 Sep 2011</date>
+        <authorinitials>ss</authorinitials>
         <revremark>bug fixes, speedups, markdown support</revremark>
       </revision>
       <revision>
@@ -105,21 +105,21 @@
       </revision>
       <revision>
         <revnumber>1.13</revnumber>
-        <date>18 ડિસેમ્બર 2009</date>
+        <date>18 December 2009</date>
         <authorinitials>sk</authorinitials>
-        <revremark>તૂટેલ ટારબોલ સુધારા</revremark>
+        <revremark>broken tarball update</revremark>
       </revision>
       <revision>
         <revnumber>1.12</revnumber>
-        <date>18 ડિસેમ્બર 2009</date>
+        <date>18 December 2009</date>
         <authorinitials>sk</authorinitials>
-        <revremark>નવા સાધન લક્ષણો અને ભૂલ સુધારાઓ</revremark>
+        <revremark>new tool features and bugfixes</revremark>
       </revision>
       <revision>
         <revnumber>1.11</revnumber>
-        <date>16 નવેમ્બર 2008</date>
+        <date>16 November 2008</date>
         <authorinitials>mal</authorinitials>
-        <revremark>GNOME doc-utils સ્થળાંતર</revremark>
+        <revremark>GNOME doc-utils migration</revremark>
       </revision>
     </revhistory>
 
@@ -128,29 +128,29 @@
   <!-- ======== Chapter 1: Introduction ======================== -->
 
   <chapter id="introduction">
-    <title>પરિચય</title>
+    <title>పరిచయం</title>
 
-    <para>આ પ્રકરણ GTK-Doc ને રજૂ કરે છે અને તે શું છે અને તેને કેવી રીતે વપરાયેલ છે તેની ઝાંખી આપે છે.</para>
+    <para>ఈ అధ్యాయము GTK-Docను పరిచయం చేస్తుంది మరియు అది యేమిచేస్తుంది దానిని యెలా వుపయోగించాలి అనేదానిపై సంక్షిప్తంగా వివరిస్తుంది.</para>
 
     <sect1 id="whatisgtkdoc">
-      <title>GTK-Doc શું છે?</title>
+      <title>GTK-Doc అంటే యేమిటి?</title>
 
-      <para>GTK-Doc એ દસ્તાવેજ C કોડ માટે વપરાયેલ છે. તે લાઇબ્રેરીઓનાં સાર્વજનિક API નાં દસ્તાવેજ માટે વપરાયેલ છે, જેવું કે GTK+ અને GNOME લાઇબ્રેરીઓ. પરંતુ તે પણ દસ્તાવેજ કાર્યક્રમ કોડ માટે વપરાયેલ છે.</para>
+      <para>GTK-Doc అనునది C కోడ్‌ను పత్రికీకరణ చేయుటకు వుపయోగించబడింది. ఇది ముఖ్యంగా GTK+ మరియు GNOME వంటి లైబ్రరీల పబ్లిక్ API పత్రికీకరణకు వుపయోగించబడింది. అయితే యిది అనువర్తనము కోడ్‌ను పత్రికీకరణ చేయుటకు కూడా వుపయోగించవచ్చును.</para>
     </sect1>
 
     <sect1 id="howdoesgtkdocwork">
-      <title>GTK-Doc કામ કેવી રીતે કરે છે?</title>
+      <title>GTK-Doc యెలా పనిచేయును?</title>
 
-      <para>GTK-Doc એ વિશિષ્ટ રીતે માળખુ થયેલ ટિપ્પણી બ્લોકોમાં સ્ત્રોત ફાઇલોની અંદર સ્થિત થયેલ વિધેયોનાં દસ્તાવેજીકરણની મદદથી કામ કરે છે, અથવા દસ્તાવેજીકરણ ટેમ્પલેટ ફાઇલોમાં ઉમેરાયેલ છે કે જે GTK-Doc વાપરે છે (છતાંપણ નોંધો કે GTK-Doc એ પણ દસ્તાવેજ વિધેયો હશે કે જે શીર્ષક ફાઇલોમાં જાહેર થયેલ છે; તે સ્થિર વિધેયો માટે આઉટપુટ ઉત્પન્ન કરતુ નથી).</para>
+      <para>GTK-Doc అనునది మూలపు(సోర్స్) ఫైళ్ళ యొక్క ఫంక్షన్స్ నందు ప్రత్యేకించి-రూపొందించిన కామెంట్ బ్లాక్స్ నందలి పత్రికీకరణను వుపయోగించి పనిచేయును, లేదా GTK-Doc వుపయోగించే మాదిరి(టెంప్లేట్) ఫైళ్ళకు జతచేసిన పత్రికీకరణను వుపయోగించును (GTK-Doc హెడర్ ఫైళ్ళ నందు డిక్లేర్ చేసివున్న ఫంక్షన్లకు మాత్రమే పత్రికీకరణ యిచ్చును; అది స్టాటిక్ ఫంక్షన్ల కొరకు అవుట్పుట్ అందించదు).</para>
 
-      <para>GTK-Doc એ perl સ્ક્રિપ્ટોની સંખ્યાને સમાવે છે, પ્રક્રિયામાં દરેક વિવિધ પગલું કરે છે.</para>
+      <para>GTK-Doc చాలా పెర్ల్ స్క్రిప్టులను కలిగివుంది, ప్రతిది వేరువేరు స్టెప్పును కార్యక్రమమునందు జరుపును.</para>
 
-      <para>ત્યાં પ્રક્રિયામાં મુખ્ય ૫ પગલાંઓ છે:</para>
+      <para>అక్కడ కార్యక్రమమునందు 5 ముఖ్య స్టెప్పులు వున్నవి:</para>
 
       <orderedlist>
 
         <listitem>
-          <para><guilabel>દસ્તાવેજીકરણને લખી રહ્યા છે.</guilabel> લેખક એ દરેક વિધેયને, મેક્રો, યુનિયન વગેરે માટે દસ્તાવેજીકરણ સાથે સ્ત્રોત ફાઇલોમાં ભરે છે. (ઉત્પન્ન થયેલ ટેમ્પલેટ ફાઇલમાં ભૂતકાળની જાણકારી દાખલ થયેલ હતી, કે જે કોઇપણ રીતે અગ્રહણીય થયેલ નથી)</para>
+          <para><guilabel>పత్రికీకరణను వ్రాయుట.</guilabel> మూలకర్త(ఆథర్) సోర్స్ ఫైళ్ళనందు ప్రతి ఫంక్షన్‌కు, మాక్రోకు, యూనియన్‌కు పత్రకీకరణను యిస్తాడు. (గతంలో సమాచారమును మాదిరి ఫైళ్ళనందు ప్రవేశపెట్టేవారు, యిది యిప్పడు సమర్ధించబడదు).</para>
         </listitem>
 
         <listitem>
@@ -159,7 +159,7 @@
 
             <application>gtkdoc-scan</application> scans the header files of the
             code looking for declarations of functions, macros, enums, structs, and unions.
-            It creates the file <filename>&lt;module&gt;-decl-list.txt</filename> containg a list of the
+            It creates the file <filename>&lt;module&gt;-decl-list.txt</filename> containing a list of the
             declarations, placing them into sections according to which header file they
             are in. On the first run this file is copied to <filename>&lt;module&gt;-sections.txt</filename>.
             The author can rearrange the sections, and the order of the
@@ -168,20 +168,39 @@
             This file contains the full declarations found by the scanner. If for
             some reason one would like some symbols to show up in the docs, where
             the full declaration cannot be found by the scanner or the declaration
-            should appear differently, one can place enties similar to the ones in
+            should appear differently, one can place entities similar to the ones in
             <filename>&lt;module&gt;-decl.txt</filename> into <filename>&lt;module&gt;-overrides.txt</filename>.
-
-            <application>gtkdoc-scanobj</application> can also be used to dynamically query a library about
-            any GtkObject subclasses it exports. It saves information about each
-            object's position in the class hierarchy and about any GTK Args and Signals it
-            provides.
+         </para>
+         <para>
+            <application>gtkdoc-scangobj</application> can also be used to dynamically query a library about
+            any GObject subclasses it exports. It saves information about each
+            object's position in the class hierarchy and about any GObject properties
+            and signals it provides.
           </para>
+         <para>
+            <application>gtkdoc-scanobj</application> should not be used anymore.
+            It was needed in the past when GObject was still GtkObject inside gtk+.
+         </para>
         </listitem>
 
         <listitem>
-          <para><guilabel>"template" ફાઇલોને ઉત્પન્ન કરી રહ્યા છે.</guilabel><application>gtkdoc-mktmpl</application> એ પહેલાં પગલામાં ભેગી થયેલ જાણકારીની મદદથી <filename class="directory">tmpl/</filename> ઉપડિરેક્ટરીમાં ફાઇલોની સંખ્યાને બનાવે છે. (નોંધો કે જે આ વારંવાર ચલાવી શકાય છે. તે ખાતરી કરવા માટે પ્રયત્ન કરશે કે જે દસ્તાવેજીકરણ હંમેશ માટે ગુમ થઇ જતો નથી.)</para>
+          <para>
+            <guilabel>Generating the "template" files.</guilabel>
+
+            <application>gtkdoc-mktmpl</application> creates a number of files in
+            the <filename class="directory">tmpl/</filename> subdirectory, using the
+            information gathered in the first step. (Note that this can be run
+            repeatedly. It will try to ensure that no documentation is ever lost.)
+          </para>
           <note>
-            <para>જ્યાં સુધી GTK-Doc 1.9 નાં ટેમ્પલેટને અવગણી શકાય છે ત્યાં સુધી. આપણે કોડમાં દસ્તાવેજીકરણ ને રાખવા માટે લોકોને પ્રોત્સાહિત કરો. <application>gtkdocize</application> એ હવે <option>--flavour no-tmpl</option> વિકલ્પને આધાર આપે છે કે જે makefile ને પસંદ કરે છે કે જે સંપૂર્ણપણે tmpl વપરાશને છોડી દે છે. જો તમે પોતાની જાતે tmpl માં ફાઇલને કદી બદલો નહિં તો, મહેરબાની કરીને dir ને દૂર કરો (દા.ત. આવૃત્તિ નિયંત્રણ સિસ્ટમ માંથી).</para>
+            <para>
+              Since GTK-Doc 1.9 the templates can be avoided. We encourage people to keep
+              documentation in the code. <application>gtkdocize</application> supports now
+              a <option>--flavour no-tmpl</option> option that chooses a makefile that
+              skips tmpl usage totally.
+              If you have never changed file in tmpl by hand, please remove the directory
+              (e.g. from version control system).
+            </para>
           </note>
         </listitem>
 
@@ -203,47 +222,36 @@
             Likewise <application>gtkdoc-mkpdf</application> turns the SGML/XML files into a PDF
             document called <filename>&lt;package&gt;.pdf</filename>.
           </para>
-          <para><filename class="directory">sgml/</filename> અથવા <filename class="directory">xml/</filename> માં ફાઇલો અને <filename class="directory">html/</filename> ડિરેક્ટરીઓ એ હંમેશા ઉપલ લખાયેલ છે. એક એ સીધુ જ તેઓને કદી સુધારતુ હોવુ જોઇએ નહિં.</para>
+          <para><filename class="directory">sgml/</filename> లేదా <filename class="directory">xml/</filename> మరియు <filename class="directory">html/</filename> డైరెక్టరీల నందలి ఫైళ్ళు యెల్లప్పుడూ దిద్దివ్రాయబడును. ఎవరూ వాటిని యెప్పుడూ నేరుగా సరికూర్చకూడదు.</para>
         </listitem>
 
         <listitem>
-          <para>
-            <guilabel>Fixing up cross-references between documents.</guilabel>
-
-            After installing the HTML files, <application>gtkdoc-fixxref</application> can be run to fix up any
-            cross-references between separate documents. For example, the GTK+
-            documentation contains many cross-references to types documented in the GLib manual.
-
-            When creating the source tarball for distribution, <application>gtkdoc-rebase</application>
-            turns all external links into web-links. When installing distributed (pregenerated) docs
-            the same application will try to turn links back to local links
-            (where those docs are installed).
-          </para>
+          <para><guilabel>పత్రముల మధ్య క్రాస్-రిఫరెన్సెస్‌ను పరిష్కరించుచున్నది.</guilabel> HTML ఫైళ్ళను సంస్థాపించిన తర్వాత, వేరు వేరు పత్రముల మధ్య క్రాస్-రిఫరెన్సెస్‌ను అమర్చుటకు <application>gtkdoc-fixxref</application> నడుపవచ్చును. ఉదాహరణకు,  GTK+ పత్రికీకరణ అనునది GLib మాన్యుయల్ నందు వుంచిన పత్రికీకరణకు చాలా క్రాస్-రిఫరెన్సెస్ కలిగివుంది. పంపిణీ కొరకు మూలపు టార్బాల్‌ను సృష్టించునప్పుడు, <application>gtkdoc-rebase</application> అనునది అన్ని బహిర్గత లింకులను వెబ్-లింకులకు మార్చును. పంపిణీచేసిన (ముందుగాజనియింపచేసిన) పత్రములను సంస్థాపించునప్పుడు అదే అనువర్తనము లింకులను స్థానిక లింకులకు (ఆ పత్రములు యెక్కడ సంస్థాపించబడినవో అక్కడికి) తిరిగివుంచుటకు ప్రయత్నించును.</para>
         </listitem>
       </orderedlist>
 
     </sect1>
 
     <sect1 id="gettinggtkdoc">
-      <title>GTK-Doc ને મેળવી રહ્યા છે</title>
+      <title>GTK-Doc పొందుట</title>
 
       <sect2 id="requirements">
-        <title>જરૂરિયાતો</title>
-        <para><guilabel>Perl v5</guilabel> - મુખ્ય સ્ક્રિપ્ટો એ Perl માં છે.</para>
-        <para><guilabel>DocBook DTD v3.0</guilabel> - આ DocBook SGML DTD છે. <ulink url="http://www.ora.com/davenport" type="http">http://www.ora.com/davenport</ulink></para>
-        <para><guilabel>Jade v1.1</guilabel> - આ વિવિધ માળખાઓમાં SGML ને રૂપાંતર કરવા માટે DSSSL પ્રોસેસર છે. <ulink url="http://www.jclark.com/jade" type="http">http://www.jclark.com/jade</ulink></para>
-        <para><guilabel>Modular DocBook Stylesheets</guilabel> આ DocBook ને HTML માં રૂપાંતરિત કરવા માટે DSSSL કોડ છે (અને થોડા બીજા બંધારણો). તે jade સાથે ભેગા વાપરેલ છે. મેં DSSSL કોડને કાર્યક્રમ કોડની યાદીઓ/ જાહેરાતોને રંગ આપવા માટે, અને ઉત્પન્ન થયેલ HTML માં વૈશ્ર્વિક પ્રતિનિર્દેશ સૂચિને આધાર આપવા માટે gtk-doc.dsl માં જરાક DSSSL કોડને વૈવિધ્યપૂર્ણ બનાવેલ છે. <ulink url="http://nwalsh.com/docbook/dsssl" type="http">http://nwalsh.com/docbook/dsssl</ulink></para>
-        <para><guilabel>docbook-to-man</guilabel> - જો તમે DocBook માંથી મુખ્ય પાનાંઓને બનાવવાનું ઇચ્છતા હોય તો, મેં થોડુ 'translation spec' ને વૈવિધ્યપૂર્ણ બનાવેલ છે, વિભાગનાં શીર્ષકનાં મોટા અક્ષર કરવા માટે અને પાનાંઓના ઊંચે 'GTK Library' શીર્ષકને ઉમેરો અને નીચે પૂનરાવર્તિત તારીખને ઉમેરો. ત્યાં <ulink url="http://www.ora.com/davenport" type="http">http://www.ora.com/davenport</ulink> પર આની કડી છે નોંધો: આ હજુ કામ કરતુ નથી.</para>
+        <title>అవసరములు</title>
+        <para><guilabel>Perl v5</guilabel> - ముఖ్య స్క్రిప్టులు Perl1 నందు వున్నవి.</para>
+        <para><guilabel>DocBook DTD v3.0</guilabel> - ఇది DocBook SGML DTD. <ulink url="http://www.ora.com/davenport" type="http">http://www.ora.com/davenport</ulink></para>
+        <para><guilabel>Jade v1.1</guilabel> - SGMLను వివిధ ఫార్మాట్ల లోనికి మార్చుటకు యిది DSSSL ప్రోసెసర్. <ulink url="http://www.jclark.com/jade" type="http">http://www.jclark.com/jade</ulink></para>
+        <para><guilabel>Modular DocBook Stylesheets</guilabel> DocBookను HTMLకు (యింకా కొన్ని యితర ఫార్మాట్లకు) మార్చుటకు యిది DSSSL కోడ్. ఇది jadeతో కలిపి వుపయోగించబడును. నేను DSSSL కోడ్‌ను కొద్దిగా మలచుకొనినాను, gtk-doc.dsl నందు, ప్రోగ్రామ్ కోడ్ జాబితాలు/డిక్లరేషన్లను రంగులో వుంచుటకు, మరియు జనియింపచేసిన HTML నందు గ్లోబల్ క్రాస్-రిఫరెన్సెస్ యిండిసెస్‌ను మద్దతించుటకు. <ulink url="http://nwalsh.com/docbook/dsssl" type="http">http://nwalsh.com/docbook/dsssl</ulink></para>
+        <para><guilabel>docbook-to-man</guilabel> - DocBook నుండి man పేజీలను సృష్టించాలని అనుకొంటే. నేను 'translation spec' ను కొద్దిగా మలచుకొనినాను, విభగాపు హెడ్డింగులను పెద్దఅక్షరములలో వుంచుకొనుటకు మరియు పేజీల యొక్క పైభాగమున 'GTK Library' శీర్షికను జతచేయుటకు మరియు క్రిందన పునఃపరిశీలన తేదీను వుంచుటకు. దీనికి <ulink url="http://www.ora.com/davenport" type="http">http://www.ora.com/davenport</ulink> పైన వొక లింకు వుంది. గమనిక: ఇంది యింకా పనిచేయుటలేదు.</para>
       </sect2>
 
       <sect2 id="installation">
-        <title>સ્થાપન</title>
-        <para>ત્યાં મૂળભૂત સ્થાન નથી કે જ્યાં DocBook Modular Stylesheets એ સ્થાપિત થયેલ હોય.</para>
-        <para>GTK-Doc ની રૂપરેખાંકિત સ્ક્રિપ્ટ એ આ 3 ડિરેક્ટરીઓને આપમેળે શોધે છે:</para>
-        <para><filename> /usr/lib/sgml/stylesheets/nwalsh-modular </filename> (RedHat દ્દારા વપરાયેલ છે)</para>
-        <para><filename> /usr/lib/dsssl/stylesheets/docbook </filename> (Debian દ્દારા વપરાયેલ છે)</para>
-        <para><filename> /usr/share/sgml/docbkdsl </filename> (SuSE દ્દારા વપરાયેલ છે)</para>
-        <para>જો તમે ગમે ત્યાં સ્ટાઇલશીટો સ્થાપિત કરેલ હોય તો, તમે વિકલ્પની મદદથી GTK-Doc ને રૂપરેખાંકિત કરવા માટે જરૂ છે, <command> --with-dsssl-dir=&lt;PATH_TO_TOPLEVEL_STYLESHEETS_DIR&gt; </command></para>
+        <title>సంస్థాపన</title>
+        <para>DocBook మాడ్యులర్ స్టైల్‌షీట్లు యిక్కడ సంస్థాపించాలని వొక ప్రామాణిక స్థలము యేమీలేదు.</para>
+        <para>GTK-Doc యొక్క ఆకృతీకరణ స్క్రిప్టు ఈ 3 డైరెక్టరీలను స్వయంచాలకంగా శోధిస్తుంది:</para>
+        <para><filename> /usr/lib/sgml/stylesheets/nwalsh-modular </filename> (RedHat ద్వారా వుపయోగించబడింది)</para>
+        <para><filename> /usr/lib/dsssl/stylesheets/docbook </filename> (Debian ద్వారా వుపయోగించబడింది)</para>
+        <para><filename> /usr/share/sgml/docbkdsl </filename> (SuSE ద్వారా వుపయోగించబడింది)</para>
+        <para>మీరు యెక్కడోవొకచోట స్టైల్‌షీట్లను సంస్థాపించివుంటే, మీరు GTK-Docను ఈ ఐచ్చికము వుపయోగించి ఆకృతీకరించవలసి వుంటుంది: <command> --with-dsssl-dir=&lt;PATH_TO_TOPLEVEL_STYLESHEETS_DIR&gt; </command></para>
       </sect2>
 
     </sect1>
@@ -263,29 +271,27 @@
     -->
 
     <sect1 id="aboutgtkdoc">
-      <title>GTK-Doc વિશે</title>
+      <title>GTK-Doc గురించి</title>
 
       <para>(FIXME)</para>
 
-      <para>(ઇતિહાસ, લેખકો, વેબ પાનાંઓ, લાઇસન્સ, ભવિષ્યનાં પ્લાનો, સરખી સિસ્ટમો સાથે સરખામણી.)</para>
+      <para>(చరిత్ర, మూలకర్తలు, వెబ్ పుటలు, లైసెన్స్, భవిష్య ప్రణాళికలు, సమానమైన యితర సిస్టమ్సుతో పోలిక.)</para>
 
     </sect1>
 
     <sect1 id="aboutthismanual">
-      <title>આ પુસ્તિકા વિશે</title>
+      <title>ఈ మాన్యుయల్ గురించి</title>
 
       <para>(FIXME)</para>
 
-      <para>
-        (who it is meant for, where you can get it, license)
-      </para>
+      <para>(ఇది యెవరి కొరకు, మీరు దీనిని యెచటనుండి పొందగలరు, లైసెన్స్)</para>
 
     </sect1>
 
   </chapter>
 
   <chapter id="settingup">
-    <title>તમારા પ્રોજેક્ટને સુયોજિત કરી રહ્યા છે</title>
+    <title>మీ ప్రోజెక్టును అమర్చుట</title>
 
     <para>
       The next sections describe what steps to perform to integrate GTK-Doc into
@@ -298,18 +304,13 @@
     </para>
 
     <sect1 id="settingup_docfiles">
-      <title>સ્કેલેટન દસ્તાવેજીકરણને સુયોજિત કરી રહ્યા છે</title>
+      <title>స్కెల్టెన్ పత్రికీకరణను అమర్చుచున్నది</title>
 
-      <para>
-        Under your top-level project directory create folders called docs/reference
-        (this way you can also have docs/help for end-user documentation).
-        It is recommended to create another subdirectory with the name of the doc-package.
-        For packages with just one library this step is not necessary.
-      </para>
+      <para>మీ పై-స్థాయి ప్రోజెక్టు డైరెక్టరీ క్రింద docs/reference అను ఫోల్డర్లను సృష్టించుము (ఈ విధంగా మీరు docs/helpను అంత్య-వినియోగదారి పత్రికీకరణ కొరకు కలిగివుండవచ్చును). doc-package నామముతో వేరొక వుపసంచయంను సృష్టించుకొనుట సిఫార్సు చేయబడింది. కేవలం వొక లైబ్రరీ మాత్రమే వున్న ప్యాకేజీలకు యిది అవసరములేదు.</para>
 
       <para>
         This can then look as shown below:
-        <example><title>ઉદાહરણ ડિરેક્ટરી બંધારણ</title>
+        <example><title>Example directory structure</title>
           <programlisting>
 <![CDATA[
 meep/
@@ -327,12 +328,12 @@ meep/
     </sect1>
 
     <sect1 id="settingup_autoconf">
-      <title>autoconf સાથે એકત્રિકરણ</title>
+      <title>autoconf తో విలీనం</title>
 
-      <para>ઘણું સરળ છે! ફક્ત તમારી <filename>configure.ac</filename> સ્ક્રિપ્ટમાં એક વાક્ય ને ઉમેરો.</para>
+      <para>చాలా సులువు! మీ <filename>configure.ac</filename> స్క్రిప్టునకు వొక లైను మాత్రమే జతచేయుము.</para>
 
       <para>
-        <example><title>autoconf સાથે એકત્રિકરણ</title>
+        <example><title>autoconf తో విలీనం</title>
           <programlisting>
 <![CDATA[
 # check for gtk-doc
@@ -361,22 +362,22 @@ AM_CONDITIONAL([ENABLE_GTK_DOC], false)
         </example>
       </para>
 
-      <para>પહેલી દલીલ રૂપરેખાંકિત સમયે gtkdocversion માટે ચકાસવા વપરાયેલ છે. બીજી, વૈકલ્પિક દલીલ એ <application>gtkdocize</application> દ્દારા વપરાયેલ છે. <symbol>GTK_DOC_CHECK</symbol> મેક્રો પણ ઘણીબધા રૂપરેખાંકિત ફેરબદલોને ઉમેરે છે:</para>
+      <para>ఆకృతీకరణ సమయము వద్ద gtkdocversion కొరకు పరిశీలించుటకు మొదటి ఆర్గుమెంటు వుపయోగించబడింది. 2వది, <application>gtkdocize</application> చేత వుపయోగించబడిన ఐచ్చిక ఆర్గుమెంట్. <symbol>GTK_DOC_CHECK</symbol> మాక్రో చాలా ఆకృతీకరణ స్విచ్‌లను జతచేస్తుంది:</para>
       <orderedlist>
-        <listitem><para>--with-html-dir=PATH : સ્થાપિત થયેલ દસ્તાવેજોનો પાથ</para></listitem>
-        <listitem><para>--enable-gtk-doc : દસ્તાવેજીકરણ ને બિલ્ડ કરવા માટે gtk-doc ને વાપરો [default=no]</para></listitem>
-        <listitem><para>--enable-gtk-doc-html : html બંધારણમાં દસ્તાવેજીકરણ બિલ્ડ કરો [default=yes]</para></listitem>
-        <listitem><para>--enable-gtk-doc-pdf : pdf બંધારણમાં દસ્તાવેજીકરણને બિલ્ડ કરો [default=no]</para></listitem>
+        <listitem><para>--with-html-dir=PATH : సంస్థాపించిన పత్రములకు పాత్</para></listitem>
+        <listitem><para>--enable-gtk-doc : పత్రికీకరణను నిర్మించుటకు gtk-doc వుపయోగించుము [default=no]</para></listitem>
+        <listitem><para>--enable-gtk-doc-html : పత్రికీకరణను html ఫార్మాట్‌నందు నిర్మించుము [default=yes]</para></listitem>
+        <listitem><para>--enable-gtk-doc-pdf : పత్రికీకరణను pdf ఫార్మాట్ నందు నిర్మించుము [default=no]</para></listitem>
       </orderedlist>
 
       <important>
-      	<para>GTK-Doc એ મૂળભૂત રીતે નિષ્ક્રિય થયેલ છે! આગળનાં <filename>configure</filename> ને ચલાવવા માટે <option>'--enable-gtk-doc'</option> ને પસાર કરવાનું યાદ રાખો. નહિં તો પહેલીથી ઉત્પન્ન થયેલ દસ્તાવેજીકરણ સ્થાપિત થયેલ છે (કે જે વપરાશકર્તાઓ માટેનો અર્થ બને છે પરંતુ ડેવલપરો માટે નહિં).</para>
+      	<para>GTK-Doc అప్రమేయంగా అచేతనము చేయబడింది! ఐచ్చికము <option>'--enable-gtk-doc'</option>ను తరువాతి <filename>configure</filename>కు నడుపుట మర్చిపోవద్దు. లేకపోతే ముందుగా జనియింపచేసిన పత్రికీకరణ సంస్థాపించబడుతుంది (ఇది వినియోగదారులకు వుపయోగకరం అయితే అభివృద్దికారులకు కాదు).</para>
       </important>
 
-      <para>આગળ વધારે તે અગ્રહણીય થયેલ છે કે જે તમારી પાસે તમારી <filename>configure.ac</filename> સ્ક્રિપ્ટની અંદર નીચેનું વાક્ય છે. આ તમારા પ્રોજેક્ટમાં <function>GTK_DOC_CHECK</function> માટે મેક્રો વ્યાખ્યાને આપમેળે નકલ કરવા માટે પરવાનગી આપે છે.</para>
+      <para>మీ <filename>configure.ac</filename> స్క్రిప్టునందు ఈ క్రింది వరుసను కలిగివుండుట చాలామంచిది. ఇది మీ ప్రోజెక్టునందు <function>GTK_DOC_CHECK</function> కొరకు స్వయంచాలకంగా మాక్రో నిర్వచనాన్ని నకలు తీయుటకు <application>gtkdocize</application>ను అనుమతిస్తుంది.</para>
 
       <para>
-        <example><title>gtkdocize માટે તૈયારી</title>
+        <example><title>gtkdocize కొరకు సన్నాహం</title>
           <programlisting>
 <![CDATA[
 AC_CONFIG_MACRO_DIR(m4)
@@ -387,9 +388,9 @@ AC_CONFIG_MACRO_DIR(m4)
     </sect1>
 
     <sect1 id="settingup_automake">
-      <title>automake સાથે એકત્રિકરણ</title>
+      <title>automake తో విలీనం</title>
 
-      <para>તમારા પ્રોજેક્ટની API દસ્તાવેજીકરણ ડિરેક્ટરી ( <filename class="directory">./docs/reference/&lt;package&gt;</filename>) માં gtkdoc-સ્ત્રોતોની ઉપડિરેક્ટરીઓનાં ઉદાહરણો માંથી <filename>Makefile.am</filename> ની પહેલી નકલ કરો. જો તમારી પાસે દરેક એક માટે ઘણાબધા ફરી આવતા દસ્તાવેજ-પેકેજો છે.</para>
+      <para>ముందుగా <filename>Makefile.am</filename>ను gtkdoc-sources యొక్క వుదాహరణల వుపసంచయం నుండి మీ ప్రోజెక్టు యొక్క API పత్రికీకరణ డైరెక్టరీనకు నకలుతీయుము (<filename class="directory">./docs/reference/&lt;package&gt;</filename>). మీరు బహుళ doc-packages కలిగివుంటే ప్రతిదానికి యిలా చేయండి.</para>
 
       <para>
         The next step is to edit the settings inside the <filename>Makefile.am</filename>.
@@ -409,7 +410,7 @@ AC_CONFIG_MACRO_DIR(m4)
       </para>
 
       <para>
-        <example><title>distcheck ને બનાવવા દરમ્યાન GTK-Doc ને સક્રિય કરો</title>
+        <example><title>distcheck చేయునప్పుడు GTK-Doc చేతనము చేయి</title>
           <programlisting>
 <![CDATA[
 DISTCHECK_CONFIGURE_FLAGS=--enable-gtk-doc
@@ -421,12 +422,12 @@ DISTCHECK_CONFIGURE_FLAGS=--enable-gtk-doc
     </sect1>
 
     <sect1 id="settingup_autogen">
-      <title>autogen સાથે એકત્રિકરણ</title>
+      <title>autogen తో విలీనం</title>
 
-      <para>મોટાભાગનાં પ્રોજેક્ટો પાસે આવૃત્તિ નિયંત્રણ સિસ્ટમ (જેવી કે cvs/svn/git) માંથી ચેકઆઉટ પછી ઇન્ફ્રાસ્ટ્રક્ચરને બિલ્ડ કરવાનું સુયોજિત કરવા માટે <filename>autogen.sh</filename> સ્ક્રિપ્ટ હશે. GTK-Doc એ સાધન <application>gtkdocize</application> તરીકે કહેવાતા સાધન સાથે આવે છે કે જે આવી સ્ક્રિપ્ટમાં વાપરી શકાય છે. તે autoheader, automake અથવા autoconf પહેલાં ચાલવુ જોઇએ.</para>
+      <para>వర్షన్ కంట్రోల్ సిస్టమ్ (cvs/svn/git వంటి) నుండి చెక్అవుట్ తర్వాత బుల్డ్ నిర్మాణం అమర్చుటకు చాలా ప్రోజెక్టులు <filename>autogen.sh</filename> స్క్రిప్టును కలిగివుంటాయి. GTK-Doc అనునది <application>gtkdocize</application> అనబడు సాధనంతో వస్తుంది దీనిని అటువంటి స్క్రిప్టు నందు వుపయోగించవచ్చును. ఇది autoheader, automake లేదా autoconf ముందు నడుపవలెను.</para>
 
       <para>
-        <example><title>autogen.sh માંથી gtkdocize ને ચલાવી રહ્યા છે</title>
+        <example><title>autogen.sh నుండి gtkdocize నడుపుతోంది</title>
           <programlisting>
 <![CDATA[
 gtkdocize || exit 1
@@ -456,23 +457,23 @@ gtkdocize || exit 1
         invocation, they can be added also to an environment variable called <symbol>GTKDOCIZE_FLAGS</symbol>
         or set as a 2nd parameter in <symbol>GTK_DOC_CHECK</symbol> macro in the configure script.
         If you have never changed file in tmpl by hand and migrating from older gtkdoc versions,
-        please remove the dir (e.g. from version control system).
+        please remove the directory (e.g. from version control system).
       </para>
     </sect1>
 
     <sect1 id="settingup_firstrun">
-      <title>દસ્તાવેજ બિલ્ડને ચલાવી રહ્યા છે</title>
+      <title>doc బుల్డును నడుపుట</title>
 
-      <para>પહેલાનાં પગલાઓ પછી બિલ્ડ ને ચલાવવા માટે સમય થઇ ગયો છે. પહેલાં આપણે <filename>autogen.sh</filename> પુન:ચલાવવાની જરૂર છે. નહિં તો પછીથી આ વિકલ્પ સાથે <filename>configure</filename> ને જાતે જ ચલાવો.</para>
+      <para>గతంలో జరిపిన స్టెప్పుల తర్వాత యిప్పుడు బుల్డును నడుపవలెను. ముందుగా మనము <filename>autogen.sh</filename>ను తిరిగి నడుపవలెను. ఈ స్క్రిప్టు మీ కొరకు ఆకృతీకరణను నడిపితే, దానికి <option>--enable-gtk-doc</option> ఐచ్చికాన్ని యివ్వుము. లేదా తరువాత ఈ ఐచ్చికముతో మానవీయంగా <filename>configure</filename>ను నడుపుము.</para>
       <para>
-        The first make run generates several additional files in the doc-dirs.
+        The first make run generates several additional files in the doc-directories.
         The important ones are:
         <filename>&lt;package&gt;.types</filename>,
         <filename>&lt;package&gt;-docs.xml</filename> (in the past .sgml),
         <filename>&lt;package&gt;-sections.txt</filename>.
       </para>
       <para>
-        <example><title>દસ્તાવેજ બિલ્ડને ચલાવી રહ્યા છે</title>
+        <example><title>doc బుల్డును నడుపుట</title>
           <programlisting>
 <![CDATA[
 ./autogen.sh --enable-gtk-doc
@@ -481,17 +482,17 @@ make
           </programlisting>
         </example>
       </para>
-      <para>હવે તમે <filename>docs/reference/&lt;package&gt;/index.html</filename> માટે તમારા બ્રાઉઝર પર આંગળી ચીંધી શકો છો. હાં, તે થોડુ હજુ નિરાશ કરે તેવુ છે. પરંતુ આગળનામ વિષય માટે આપણે તને કહીએ છે કે જીદંગી સાથે પાનાંઓને કેવી રીતે ભરવા તે દરમ્યાન થોડા સમય માટે અટકી જાય છે</para>
+      <para>ఇప్పుడు మీ బ్రౌజర్‌కు మీరు <filename>docs/reference/&lt;package&gt;/index.html</filename>ను సూచించవచ్చును. అవును, యిప్పటికి యిది కొంత నిరుత్సాహపరుస్తోంది. అయితే ఆగండి, తరువాతి అధ్యాయమునందు పేజీలను యెలా నింపాలో చెబుతాము.</para>
     </sect1>
 
     <sect1 id="settingup_vcs">
-      <title>આવૃત્તિ નિયંત્રણ સિસ્ટમો સાથે એકત્રિકરણ</title>
+      <title>వర్షన్ కంట్రోల్ సిస్టమ్‌తో విలీనం</title>
 
       <para>
         As a rule of the thumb, it's those files you edit, that should go under
         version control. For typical projects it's these files:
         <filename>&lt;package&gt;.types</filename>,
-        <filename>&lt;package&gt;-docs..xml</filename> (in the past .sgml),
+        <filename>&lt;package&gt;-docs.xml</filename> (in the past .sgml),
         <filename>&lt;package&gt;-sections.txt</filename>,
         <filename>Makefile.am</filename>
       </para>
@@ -501,7 +502,7 @@ make
       <title>Integration with plain makefiles or other build systems</title>
 
       <para>
-        In the case one does not want to use automake and therfore
+        In the case one does not want to use automake and therefore
         <filename>gtk-doc.mak</filename> one will need to call the gtkdoc tools
         in the right order in own makefiles (or other build tools).
       </para>
@@ -533,7 +534,7 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
   </chapter>
 
   <chapter id="documenting">
-    <title>કોડને દસ્તાવેજ કરી રહ્યા છે</title>
+    <title>కోడ్‌ను పత్రికీకరణ చేయుట</title>
 
     <para>
       GTK-Doc uses source code comment with a special syntax for code documentation.
@@ -543,25 +544,16 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
     </para>
 
     <note>
-      <title>દસ્તાવેજીકરણ નિયુક્તિ</title>
-      <para>
-        In the past most documentation had to be filled into files residing
-	inside the <filename>tmpl</filename> directory. This has the
-	disadvantages that the information is often not updated and also that
-	the file tend to cause conflicts with version control systems.
-      </para>
-      <para>
-        The avoid the aforementioned problems we suggest putting the
-	documentation inside the sources. This manual will only describe this
-	way of documenting code.
-      </para>
+      <title>పత్రికీకరణ స్థానము</title>
+      <para>గతంలో చాలా వరకు పత్రికీకరణ అనునది <filename>tmpl</filename> డైరెక్టరీ క్రిందని ఫైళ్ళలో నింపవలసివుండేది. సమాచారము సరిగా నవీకరించబడక పోవుట మరియు ఆ ఫైలు వర్షన్ కంట్రోల్ సిస్టమ్సుతో విభేదించుట వంటి లోపాలను యిది కలిగివుంది.</para>
+      <para>ముందుగా తెలిపిన సమస్యలను తప్పించుటకు మేము పత్రికీకరణను మూలముల లోపలే వుంచమని సూచించుచున్నాము. ఈ మాన్యుయల్ ఈ విధంగా కోడ్ పత్రికీకరణను మాత్రమే వివరించును.</para>
     </note>
 
     <para>
-      The scanner can handle the majority of c headers fine. In the case of
+      The scanner can handle the majority of C headers fine. In the case of
       receiving warnings from the scanner that look like a special case, one can
       hint GTK-Doc to skip over them.
-      <example><title>GTK-Doc ટિપ્પણી બ્લોક</title>
+      <example><title>GTK-Doc comment block</title>
         <programlisting>
 <![CDATA[
 #ifndef __GTK_DOC_IGNORE__
@@ -575,9 +567,12 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
     <!--  -->
 
     <sect1 id="documenting_syntax">
-      <title>દસ્તાવેજીકરણ ટિપ્પણીઓ</title>
+      <title>పత్రికీకరణ వ్యాఖ్యలు</title>
 
-      <para>ઘણીબધા વાક્યની ટિપ્પણીઓ કે જે વધારાનાં '*' ચિહ્ન દસ્તાવેજીકરણ બ્લોક સાથે શરૂ થાય છે કે જે  GTK-Doc સાધનો દ્દારા પ્રક્રિયા થયેલ હશે. <example><title>GTK-Doc ટિપ્પણી બ્લોક</title>
+      <para>
+        A multiline comment that starts with an additional '*' marks a
+        documentation block that will be processed by the GTK-Doc tools.
+        <example><title>GTK-Doc comment block</title>
           <programlisting>
 <![CDATA[
 /**
@@ -586,28 +581,26 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
  */
 ]]>
           </programlisting>
-        </example></para>
-
-      <para>
-        The 'identifier' is one line with the name of the item the comment is
-        related to. The	syntax differs a little depending on the item.
-        (TODO add table showing identifiers)
+        </example>
       </para>
+
+      <para>'identifier' అనునది వ్యాఖ్యకు సంభందించిన అంశము యొక్క నామముతో వుండు వొక వరుస. అంశము పై ఆధారపడి సిన్టాక్సు అనునది కొద్దిగా విభేదించును. (చేయవలసినది identifies చూపు పట్టికను జతచేయి)</para>
 
       <para>
         The 'documentation' block is also different for each symbol type. Symbol
         types that get parameters such as functions or macros have the parameter
         description first followed by a blank line (just a '*').
-        Afterwards follows the detailed description. All lines (outside program-
+        Afterwards follows the detailed description. All lines (outside program
         listings and CDATA sections) just containing a ' *' (blank-asterisk) are
         converted to paragraph breaks.
         If you don't want a paragraph break, change that into ' *  '
-        (blank-asterisk-blank-blank).
+        (blank-asterisk-blank-blank). This is useful in preformatted text (code
+        listings).
       </para>
 
       <tip>
         <para>
-          When documenting code, describe two apsects:
+          When documenting code, describe two aspects:
           <itemizedlist>
              <listitem>
                <para>
@@ -617,7 +610,7 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
              </listitem>
              <listitem>
                <para>
-                 What it does: Tell about common uses. Put it in releation
+                 What it does: Tell about common uses. Put it in relation
                  with the other API.
                </para>
              </listitem>
@@ -631,31 +624,47 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
         though. GTK-Doc comes to help by providing several useful abbreviations.
         <itemizedlist>
           <listitem>
-            <para>વિધેયો અથવા મેક્રોનો સંદર્ભ લેવા માટે function() ને વાપરો કે જે દલીલોને લે છે.</para>
+            <para>
+              Use function() to refer to functions or macros which take arguments.
+            </para>
           </listitem>
           <listitem>
-            <para>પરિમાણોનો સંદર્ભ લેવા માટે @param ને વાપરો. બીજા વિધેયોનાં પરિમાણો માટે જ્યારે સંદર્ભ કરી રહ્યા હોય ત્યારે આને પણ વાપરો, વર્ણવવા માટે એકને સંબંધિત છે.</para>
+            <para>
+              Use @param to refer to parameters. Also use this when referring to
+              parameters of other functions, related to the one being described.
+            </para>
           </listitem>
           <listitem>
-            <para>કૉન્સ્ટન્ટ નો સંદર્ભ લેવા માટે %constant ને વાપરો, દા.ત. %G_TRAVERSE_LEAFS.</para>
+            <para>
+              Use %constant to refer to a constant, e.g. %G_TRAVERSE_LEAFS.
+            </para>
           </listitem>
           <listitem>
-            <para>સંકેતનાં બીજા પ્રકારોનો સંદર્ભ લેવા માટે #symbol ને વાપરો, દા.ત. structs અને enums અને macros કે જે દલીલો લેતુ નથી.</para>
+            <para>
+              Use #symbol to refer to other types of symbol, e.g. structs and
+              enums and macros which don't take arguments.
+            </para>
           </listitem>
           <listitem>
-            <para>#Object ને વાપરો::GObject સંકેતનો સંદર્ભ લેવા માટે સંકેત</para>
+            <para>
+              Use #Object::signal to refer to a GObject signal.
+            </para>
           </listitem>
           <listitem>
-            <para>#Object ને વાપરો:GObject ગુણધર્મનો સંદર્ભ લેવા માટે ગુણધર્મ</para>
+            <para>
+              Use #Object:property to refer to a GObject property.
+            </para>
           </listitem>
           <listitem>
-            <para>બંધારણની અંદર ક્ષેત્રનો સંદર્ભ લેવા માટે #Struct.field ને વાપરો.</para>
+            <para>
+              Use #Struct.field to refer to a field inside a structure.
+            </para>
           </listitem>
         </itemizedlist>
       </para>
 
       <tip>
-	     <para>જો તમારે તેઓને બદલ્યા વગર GTK-Doc વગર તમારાં દસ્તાવેજીકરણમાં વિશિષ્ટ અક્ષરો '&lt;', '&gt;', '()', '@', '%', or '#' ને વાપરવાનું ઇચ્છતા હોય તો તમે XML વસ્તુઓ "&amp;lt;", "&amp;gt;", "&amp;lpar;", "&amp;rpar;", "&amp;commat;", "&amp;percnt;" અને "&amp;num;" ને વાપરી શકો છો અથવા બેકસ્લેશ '\' સાથે તેઓમાંથી બહાર નીકળી જાઓ.</para>
+	     <para>మీరు ప్రత్యేక ఆక్షరములు '&lt;', '&gt;', '()', '@', '%', or '#'ను మీ పత్రికీకరణనందు GTK-Doc వాటిని మార్చకుండా వుపయోగించాలి అంటే మీరు XML మూలకములు "&amp;lt;", "&amp;gt;", "&amp;lpar;", "&amp;rpar;", "&amp;commat;", "&amp;percnt;" మరియు "&amp;num;" వుపయోగించవచ్చు లేదా వాటిని '\' బాక్‌స్లాష్‌తో ఎస్కేప్ చేయుము.</para>
       </tip>
 
       <para>
@@ -694,17 +703,17 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
       </para>
 
       <tip>
-	<para>પહેલાનાં GTK-Doc માં પહેલેથી જણાવેલ પ્રમાણે સાર્વજનિક API દસ્તાવેજીકરણ માટે છે. છતાં એક એ સ્થિર સંકેતો માટે દસ્તાવેજીકરણ ને લખી શકતુ નથી. તેમ છતાં તે પેલાં સંકેતો પર ટિપ્પણી કરવા માટે સારુ છે. આ તમારાં કોડને સમજવા માટે બીજાને મદદ કરે છે. માટે આપણે સામાન્ય ટિપ્પણીઓની મદદથી આ ટિપ્પણી એ અગ્રહણીય કરેલ છે (પહેલાં વાક્યમાં બીજા '*' વગર). જો પછી વિધેયને સાર્વજનિક બનાવવાની જરૂર છે, ટિપ્પણી બ્લોકમાં બીજા '*' ઉમેરવા માટે બધાને કરવાની જરૂર છે અને ફાઇલ વિભાગોની અંદર જમણી જગ્યા પર સંકેત નામને દાખલ કરો.</para>
+	<para>ముందుగా చెప్పినట్లుగా GTK-Doc అనునది పబ్లిక్ API పత్రికీకరణ కొరకు. స్థిర చిహ్నములకు వొక్కరే పత్రికీకరణ వ్రాయలేరు. ఆ చిహ్నములను కూడా వ్యాఖ్యానించుట మంచిది. ఇది యితరులు కూడా మీ కోడ్‌ను అర్ధము చేసుకొనుటకు సహాయపడును. అందుకని వీటిని సాదారణ వ్యాఖ్యలు (మొదటి వరుసనందు 2వ '*' లేకుండా) వుపయోగించి వ్యాఖ్యానించమని సూచించడమైంది. తరువాత ఆ ఫంక్షన్ పబ్లిక్‌గా మార్చవలసివుంటే, చేయవలసినదల్లా వేరొక '*'ను వ్యాఖ్య బ్లాక్ నందు చేర్చి మరియు చిహ్నపు నామాన్నివిభగాముల ఫైలునందు సరైన స్థానములో వుంచడమే.</para>
       </tip>
     </sect1>
 
     <sect1 id="documenting_sections">
-      <title>વિભાગોનું દસ્તાવેજ કરી રહ્યા છે</title>
+      <title>పత్రికీకరణ విభాగములు</title>
 
-      <para>દસ્તાવેજીકરણનો દરેક વિભાગ એ એર વર્ગ અથવા મોડ્યુલ વિશે જાણકારીને સમાવે છે. એક ઘટક એ વિભાગ બ્લોક લખી શકે છે તે રજૂ કરવા માટે. ટૂંકુ વર્ણન એ સમાવિષ્ટોનાં કોષ્ટકની અંદર પણ વપરાયેલ છે. બધી @fields વૈકલ્પિક છે.</para>
+      <para>పత్రికీకరణ యొక్క ప్రతి విభాగము వొక క్లాస్ లేదా మాడ్యూల్ గురించిన సమాచారమును కలిగివుంటుంది. మూలకాన్ని పరిచయం చేయుటకు వొకరు విభాగపు బ్లాక్‌ను వ్రాయవచ్చును. పొట్టి వివరణ అనునది పట్టిక యొక్క సారముల లోపలకూడా వుపయోగించబడును. అన్ని @fields ఐచ్చికమైనవి.</para>
 
       <para>
-        <example><title>વિભાગ ટિપ્પણી બ્લોક</title>
+        <example><title>విభాగపు వ్యాఖ్య బ్లాక్</title>
           <programlisting>
 <![CDATA[
 /**
@@ -728,28 +737,23 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
         <varlistentry>
           <term>SECTION:&lt;name&gt;</term>
           <listitem>
-            <para>
-              The name links the section documentation to the respective part in
-              the <filename>&lt;package&gt;-sections.txt</filename> file. The
-              name give here should match the &lt;FILE&gt; tag in the
-              <filename>&lt;package&gt;-sections.txt</filename> file.
-            </para>
+            <para>నామము అనునది విభాగపు పత్రికీకరణను <filename>&lt;package&gt;-sections.txt</filename> ఫైలునందలి సంభందిత భాగమునకు లింకుచేయును. ఇక్కడ యిచ్చిన నామము <filename>&lt;package&gt;-sections.txt</filename> ఫైలునందలి &lt;FILE&gt; టాగ్‌తో సరిపోలవలెను.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>@shortdescription (_d)</term>
+          <term>@short_description</term>
           <listitem>
-            <para>વિભાગનું એક વાક્યનું વર્ણન, કે જે પછી TOC માં અને વિભાગ પાનાંની ટોચે કડીઓ પછી દેખાશે.</para>
+            <para>విభాగము యొక్క వివరణ వొక్క వరుసలో, తరువాత అది TOC నందు లింక్సు తరువాత మరియు విభాగపు పేజీ పైన కనిపించును.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term>@title</term>
           <listitem>
-            <para>વિભાગનું શીર્ષક એ SECTION રજૂઆતમાંથી &lt;name&gt; માટે મૂળભૂત કરેલ છે. તે @title ક્ષેત્ર સાથે અવગણી શકાય છે.</para>
+            <para>విభాగపు శీర్షిక అనునది SECTION డిక్లరేషన్ నుండి &lt;name&gt; అప్రమేయం కాబడును. ఇది @title క్షేత్రము ద్వారా దిద్దివ్రాయబడును.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>@sectionid (_i)</term>
+          <term>@section_id</term>
           <listitem>
             <para>
               Overrides the use of title as a section identifier. For GObjects
@@ -759,7 +763,7 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>@seealso (_a)</term>
+          <term>@see_also</term>
           <listitem>
             <para>
               A list of symbols that are related to this section.
@@ -770,7 +774,7 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
           <term>@stability</term>
           <listitem>
             <para>
-              A informal description of the stability level this API has.
+              An informal description of the stability level this API has.
               We recommend the use of one of these terms:
               <itemizedlist>
                 <listitem>
@@ -798,10 +802,21 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
                   </para>
                 </listitem>
                 <listitem>
-                  <para>ખાનગી - ઇન્ટપફેસ કે જે GNOME સ્ટેક પોતામાં વાપરી શકાય છે, પરંતુ અંતિમ વપરાશકર્તાઓ માટે દસ્તાવેજ થયેલ નથી. જેવા કે વિધેયો એ સ્પષ્ટ થયેલ અને દસ્તાવેજ પ્રમાણે પમ વાપરવુ જોઇએ.</para>
+                  <para>
+                    Private
+                    - An interface that can be used within the GNOME stack
+                    itself, but that is not documented for end-users. Such
+                    functions should only be used in specified and documented
+                    ways.
+                  </para>
                 </listitem>
                 <listitem>
-                  <para>આંતરિક - ઇન્ટરફેસ કે જે મોડ્યુલ માટે આંતરિક છે અને અંતિમ-વપરાશકર્તાનાં દસ્તાવેજીકરણની જરૂર નથી. વિધેયો કે જે દસ્તાવેજ થયેલ નથી તે આંતરિક કરવા માટે ધારેલ છે.</para>
+                  <para>
+                    Internal
+                    - An interface that is internal to a module and does not
+                    require end-user documentation. Functions that are
+                    undocumented are assumed to be Internal.
+                  </para>
                 </listitem>
               </itemizedlist>
             </para>
@@ -810,38 +825,25 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
         <varlistentry>
           <term>@include</term>
           <listitem>
-            <para>
-              The <literal>#include</literal> files to show in the section
-              synopsis (a comma separated list), overriding the global
-              value from the <link linkend="metafiles_sections">section
-              file</link> or command line.  This item is optional.
-            </para>
+            <para>విభాగపు సారాంశము నందు చూపుటకు <literal>#include</literal> ఫైళ్ళు (కామాతో వేరుచేయబడిన జాబితా), <link linkend="metafiles_sections">విభాగపు ఫైలు</link> లేదా ఆదేశ వరుసనుండి గ్లోబల్ విలువను దిద్దివ్రాయుట. ఈ అంశము ఐచ్చికము.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
           <term>@image</term>
           <listitem>
-            <para>
-              The image to display at the top of the reference page for this
-              section.  This will often be some sort of a diagram to illustrate
-              the visual appearance of a class or a diagram of its relationship
-              to other classes.  This item is optional.
-            </para>
+            <para>ఈ విభాగము కొరకు సూచనపేజీ పైన ప్రదర్శించుటకు ప్రతిబింబము. ఇది తరుచుగా వొక క్లాస్ యొక్క విజువల్ అప్పియరెన్స్ వివరించుటకు డయాగ్రమ్ వంటిది లేదా యితర క్లాసులతో దాని సంభందాన్ని తెలిపే డయాగ్రమ్. ఈ అంశము ఐచ్చికము.</para>
           </listitem>
         </varlistentry>
       </variablelist>
 
       <tip>
-        <para>
-          To avoid unnecessary recompilation after doc-changes put the section
-          docs into the c-source where possible.
-        </para>
+        <para>అనవసరపు రికంపైలేషన్‌ను విసర్జించుటకు doc-changes తర్వాత విభాగపు పత్రములను c-source నందు వీలైనచోట వుంచుము.</para>
       </tip>
 
     </sect1>
 
     <sect1 id="documenting_symbols">
-      <title>સંકેતોનું દસ્તાવેજ કરી રહ્યા છે</title>
+      <title>చిహ్నముల పత్రికీకరణ</title>
 
       <para>
         Each symbol (function, macro, struct, enum, signal and property) is
@@ -851,29 +853,29 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
         structs and enums in the header file.
       </para>
 
-      <sect2><title>સામાન્ય ટેગ</title>
+      <sect2><title>సాధారణ టాగ్లు</title>
 
         <para>
           You can add versioning information to all documentation elements to tell
-          when an api was introduced, or when it was deprecated.
+          when an API was introduced, or when it was deprecated.
         </para>
 
-        <variablelist><title>Versioning Tags</title>
-          <varlistentry><term>જ્યાં સુધી:</term>
+        <variablelist><title>వర్షనింగ్ టాగ్స్</title>
+          <varlistentry><term>అప్పటినుంచి:</term>
             <listitem>
-              <para>વર્ણન જ્યાં સુધી API કોડનું કઇ આવૃત્તિ ઉપલ્બધ છે.</para>
+              <para>కోడ్ యొక్క యే వర్షన్ నుండి API అందుబాటులోవుందో వివరణ.</para>
             </listitem>
           </varlistentry>
-          <varlistentry><term>અપ્રચલિત થયેલ:</term>
+          <varlistentry><term>తీసివేసిన:</term>
             <listitem>
-              <para>ફકરાને સૂચિત કરી રહ્યા છે કે જે આ વિધેયને વધારે વાપરવુ જોઇએ નહિં. વર્ણનએ નવા API માટે વાંચનારને ધ્યાન લેવુ જોઇએ.</para>
+              <para>ఈ ఫంక్షన్ యికపై వుపయోగించుటలేదని పారాగ్రాఫ్ చెబుచున్నది. వివరణ చదువరిని కొత్త APIకు సూచించాలి.</para>
             </listitem>
           </varlistentry>
         </variablelist>
 
-          <para>(FIXME : સ્થિરતા જાણકારી)</para>
+          <para>(FIXME : స్థిరత్వ సమాచారము)</para>
 
-        <example><title>સામાન્ય ટેગ</title>
+        <example><title>సాధారణ టాగ్లు</title>
           <programlisting>
 <![CDATA[
 /**
@@ -886,7 +888,7 @@ gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html
  *
  * Since: 2.6
  * Deprecated: 2.12: Use foo_baz_get_bar() instead.
- **/
+ */
 Bar *
 foo_get_bar(Foo *foo)
 {
@@ -896,9 +898,11 @@ foo_get_bar(Foo *foo)
         </example>
       </sect2>
 
-      <sect2><title>વિધેય ટિપ્પણી બ્લોક</title>
+      <sect2><title>ఫంక్షన్ వ్యాఖ్యానపు బ్లాక్</title>
 
-        <para>મહેરબાની કરીને યાદ રાખો: <itemizedlist>
+        <para>
+          Please remember to:
+          <itemizedlist>
             <listitem>
               <para>
                 Document whether returned objects, lists, strings, etc, should be
@@ -906,24 +910,28 @@ foo_get_bar(Foo *foo)
               </para>
             </listitem>
             <listitem>
-              <para>દસ્તાવેજ ક્યાંતો પરિમાણો એ NULL હોઇ શકે છે, અને શું થશે જો તેઓ છે તો.</para>
+              <para>
+                Document whether parameters can be NULL, and what happens if they are.
+              </para>
             </listitem>
             <listitem>
               <para>
                 Mention interesting pre-conditions and post-conditions where appropriate.
               </para>
             </listitem>
-          </itemizedlist></para>
+          </itemizedlist>
+        </para>
 
-        <para>Gtk-doc એ '_' સાથે શરૂ થતા બધા સંકેતો (મેક્રો, વિધેયો) ને ખાનગી ધારે છે. તેઓ સ્થિર વિધેયો જેવું વર્ણતૂક કરે છે.</para>
+        <para>Gtk-doc అన్ని చిహ్నములు (macros, functions) '_'తో ప్రారంభమగునవి వ్యక్తిగతమైనవని పరిగణించును. అవి స్టాటిక్ ఫంక్షన్సు వలె పరిగణించబడును.</para>
 
         <para>
-          
-          Also, take a look at gobject introspection annotation tags:
+          <!-- FIXME: we should ideally link/describe the gobject introspection
+          annotation tag -->
+          Also, take a look at GObject Introspection annotation tags:
           http://live.gnome.org/GObjectIntrospection/Annotations
         </para>
 
-        <example><title>વિધેય ટિપ્પણી બ્લોક</title>
+        <example><title>ఫంక్షన్ వ్యాఖ్యానపు బ్లాక్</title>
           <programlisting>
 <![CDATA[
 /**
@@ -947,27 +955,24 @@ foo_get_bar(Foo *foo)
           </programlisting>
         </example>
 
-        <variablelist><title>વિધેય ટૅગો</title>
-          <varlistentry><term>પાછુ આવે છે:</term>
+        <variablelist><title>ఫంక్షన్ టాగ్లు</title>
+          <varlistentry><term>తిరిగివచ్చినవి:</term>
             <listitem>
-              <para>ફકરો પાછુ મળેલ પરિણામને વર્ણવી રહ્યા છે.</para>
+              <para>పారాగ్రాఫ్ తిరిగివచ్చిన ఫలితాన్ని వివరిస్తుంది.</para>
             </listitem>
           </varlistentry>
           <varlistentry><term>@...:</term>
             <listitem>
-              <para>
-                In case the function has variadic arguments, you should use this
-                tag (@Varargs: does also work for historic reasons).
-              </para>
+              <para>ఒకవేళ ఫంక్షన్ వేరియాడిక్ ఆర్గుమెంట్లను కలిగివుంటే, మీరు ఈ టాగ్‌ను వుపయోగించాలి (@Varargs: చారిత్రక కారణాలకు కూడా పనిచేయును).</para>
             </listitem>
           </varlistentry>
         </variablelist>
 
       </sect2>
 
-      <sect2><title>ગુણધર્મ ટિપ્પણી બ્લોક</title>
+      <sect2><title>లక్షణము వ్యాఖ్యాము బ్లాక్</title>
 
-        <example><title>ગુણધર્મ ટિપ્પણી બ્લોક</title>
+        <example><title>లక్షణము వ్యాఖ్యాము బ్లాక్</title>
           <programlisting>
 <![CDATA[
 /**
@@ -982,9 +987,11 @@ g_object_class_install_property (object_class, PROP_SOME_PROPERTY, ...);
 
       </sect2>
 
-      <sect2><title>સંકેત ટિપ્પણા બ્લોક</title>
+      <sect2><title>సంకేతపు వ్యాఖ్యానము బ్లాక్</title>
 
-        <para>મહેરબાની કરીને યાદ રાખો: <itemizedlist>
+        <para>
+          Please remember to:
+          <itemizedlist>
             <listitem>
               <para>
                 Document when the signal is emitted and whether it is emitted before
@@ -996,9 +1003,10 @@ g_object_class_install_property (object_class, PROP_SOME_PROPERTY, ...);
                 Document what an application might do in the signal handler.
               </para>
             </listitem>
-          </itemizedlist></para>
+          </itemizedlist>
+        </para>
 
-        <example><title>સંકેત ટિપ્પણા બ્લોક</title>
+        <example><title>సంకేతపు వ్యాఖ్యానము బ్లాక్</title>
           <programlisting>
 <![CDATA[
 /**
@@ -1018,8 +1026,8 @@ foo_signals[FOOBARIZE] =
 
       </sect2>
 
-      <sect2><title>Struct ટિપ્પણી બ્લોક</title>
-        <example><title>Struct ટિપ્પણી બ્લોક</title>
+      <sect2><title>Struct వ్యాఖ్యానము బ్లాక్</title>
+        <example><title>Struct వ్యాఖ్యానము బ్లాక్</title>
           <programlisting>
 <![CDATA[
 /**
@@ -1047,7 +1055,7 @@ typedef struct _FooWidget {
 
         <para>
           Struct comment blocks can also be used for GObjects and GObjectClasses.
-          It is usualy a good idea to add a comment blco for a class, if it has
+          It is usually a good idea to add a comment block for a class, if it has
           vmethods (as this is how they can be documented). For the GObject
           itself one can use the related section docs, having a separate block
           for the instance struct would be useful if the instance has public
@@ -1057,8 +1065,8 @@ typedef struct _FooWidget {
 
       </sect2>
 
-      <sect2><title>Enum ટિપ્પણી બ્લોક</title>
-        <example><title>Enum ટિપ્પણી બ્લોક</title>
+      <sect2><title>Enum వ్యాఖ్యానము బ్లాక్</title>
+        <example><title>Enum వ్యాఖ్యానము బ్లాక్</title>
           <programlisting>
 <![CDATA[
 /**
@@ -1067,8 +1075,7 @@ typedef struct _FooWidget {
  * @SOMETHING_BAR: something bar
  *
  * Enum values used for the thing, to specify the thing.
- *
- **/
+ */
 typedef enum {
   SOMETHING_FOO,
   SOMETHING_BAR,
@@ -1089,9 +1096,9 @@ typedef enum {
     </sect1>
 
     <sect1 id="documenting_docbook">
-      <title>ઉપયોગી DocBook ટૅગ</title>
+      <title>ఉపయోగకర DocBook టాగ్స్</title>
 
-      <para>અહિંયા અમુક DocBook ટૅગ છે કે જે મોટાભાગનાં ઉપયોગી છે જ્યારે કોડનું દસ્તાવેજ કરી રહ્યા છે.</para>
+      <para>కోడ్‌ను పత్రికీకరణ చేయునప్పుడు యెక్కువ వుపయోగకరంగా వుండే మరికొన్ని DocBook టాగ్స్ యిక్కడ వున్నాయి.</para>
 
       <para>
         To link to another section in the GTK docs:
@@ -1109,13 +1116,16 @@ typedef enum {
         Spaces and underscores are converted to '-' to conform to SGML/XML.
       </para>
 
-      <para>બહારનાં વિધેયનો સંદર્ભ લેવા માટે, દા.ત. મૂળભૂત C વિધેય: <informalexample>
+      <para>
+        To refer to an external function, e.g. a standard C function:
+        <informalexample>
           <programlisting>
 <![CDATA[
 <function>...</function>
 ]]>
           </programlisting>
-        </informalexample></para>
+        </informalexample>
+      </para>
 
       <para>
         To include example code:
@@ -1151,7 +1161,9 @@ typedef enum {
 ]]>
       </para>
 
-      <para>બુલેટ થયેલ યાદીઓને સમાવવા માટે: <informalexample>
+      <para>
+        To include bulleted lists:
+        <informalexample>
           <programlisting>
 <![CDATA[
 <itemizedlist>
@@ -1168,7 +1180,8 @@ typedef enum {
 </itemizedlist>
 ]]>
           </programlisting>
-        </informalexample></para>
+        </informalexample>
+      </para>
 
       <para>
         To include a note which stands out from the text:
@@ -1185,29 +1198,38 @@ typedef enum {
         </informalexample>
       </para>
 
-      <para>પ્રકારનો સંદર્ભ લેવા માટે: <informalexample>
+      <para>
+        To refer to a type:
+        <informalexample>
           <programlisting>
 <![CDATA[
 <type>unsigned char</type>
 ]]>
           </programlisting>
-        </informalexample></para>
+        </informalexample>
+      </para>
 
-      <para>બહારનાં બંધારણનો સંદર્ભ લેવા માટે (GTK દસ્તાવેજોમાં વર્ણવેલ નથી): <informalexample>
+      <para>
+        To refer to an external structure (not one described in the GTK docs):
+        <informalexample>
           <programlisting>
 <![CDATA[
 <structname>XFontStruct</structname>
 ]]>
           </programlisting>
-        </informalexample></para>
+        </informalexample>
+      </para>
 
-      <para>બંધારણનાં ક્ષેત્રનો સંદર્ભ લેવા માટે: <informalexample>
+      <para>
+        To refer to a field of a structure:
+        <informalexample>
           <programlisting>
 <![CDATA[
 <structfield>len</structfield>
 ]]>
           </programlisting>
-        </informalexample></para>
+        </informalexample>
+      </para>
 
       <para>
         To refer to a class name, we could possibly use:
@@ -1222,35 +1244,44 @@ typedef enum {
         a link to the GtkWidget page - see <link linkend="documenting_syntax">the abbreviations</link>).
       </para>
 
-      <para>લખાણ પર ભાર મૂકવા માટે: <informalexample>
+      <para>
+        To emphasize text:
+        <informalexample>
           <programlisting>
 <![CDATA[
 <emphasis>This is important</emphasis>
 ]]>
           </programlisting>
-        </informalexample></para>
+        </informalexample>
+      </para>
 
-      <para>ફાઇલનામો વાપરવા માટે: <informalexample>
+      <para>
+        For filenames use:
+        <informalexample>
           <programlisting>
 <![CDATA[
 <filename>/home/user/documents</filename>
 ]]>
           </programlisting>
-        </informalexample></para>
+        </informalexample>
+      </para>
 
-      <para>કીઓ વાપરવાનું સંદર્ભ લેવા માટે: <informalexample>
+      <para>
+        To refer to keys use:
+        <informalexample>
           <programlisting>
 <![CDATA[
 <keycombo><keycap>Control</keycap><keycap>L</keycap></keycombo>
 ]]>
           </programlisting>
-        </informalexample></para>
+        </informalexample>
+      </para>
 
     </sect1>
   </chapter>
 
   <chapter id="metafiles">
-    <title>વધારાની ફાઇલોને ભરી રહ્યા છે</title>
+    <title>Filling the extra files</title>
 
     <para>
       There are a couple of extra files, that need to be maintained along with
@@ -1261,9 +1292,15 @@ typedef enum {
     </para>
 
     <sect1 id="metafiles_types">
-      <title>ફાઇલોનાં પ્રકારોને સુધારી રહ્યા છે</title>
+      <title>Editing the types file</title>
 
-      <para>જો તમે લાઇબ્રેરી અથવા કાર્યક્રમ એ GtkObjects/GObjects ને સમાવે તો, તમે દસ્તાવેજીકરણમાં બતાવેલ શ્રેણીમાં તેનાં સંકેતો, દલીલો/પરિમાણો અને સ્થાનને ઇચ્છો તો. <filename>&lt;package&gt;.types</filename> ફાઇલ ની અંદર તેનાં સમાવેશ સાથે <function>xxx_get_type</function> વિધેયોની ભેગી યાદીમાં તમારે બધાને કરવાની જરૂર છે.</para>
+      <para>
+        If your library or application includes GObjects, you want
+        their signals, arguments/parameters and position in the hierarchy to be
+        shown in the documentation. All you need to do, is to list the
+        <function>xxx_get_type</function> functions together with their include
+        inside the <filename>&lt;package&gt;.types</filename> file.
+      </para>
 
       <para>
         <example><title>Example types file snippet</title>
@@ -1280,12 +1317,16 @@ gtk_arrow_get_type
         </example>
       </para>
 
-      <para>જ્યાં સુધી GTK-Doc 1.8 <application>gtkdoc-scan</application> એ તમારા માટે આ યાદી ઉત્પન્ન કરી શકે, <filename>Makefile.am</filename> માં SCAN_OPTIONS માટે "--rebuild-types" ને ખાલી ઉમેરો. જો તમે આ હેતુ થી વાપરો તો તમારે ફાઇલનાં પ્રકારોની યાદી કરવી જોઇએ નહિ અથવા આવૃત્તિ નિયંત્રણ હેઠળ તે હોવુ જોઇએ નહિં.</para>
+      <para>
+        Since GTK-Doc 1.8 <application>gtkdoc-scan</application> can generate this list for you.
+        Just add "--rebuild-types" to SCAN_OPTIONS in <filename>Makefile.am</filename>. If you
+        use this approach you should not dist the types file nor have it under version control.
+      </para>
 
     </sect1>
 
     <sect1 id="metafiles_master">
-      <title>મુખ્ય દસ્તાવેજને સુધારી રહ્યા છે</title>
+      <title>Editing the master document</title>
 
       <para>
         GTK-Doc produces documentation in DocBook SGML/XML. When processing the
@@ -1320,7 +1361,7 @@ gtk_arrow_get_type
       </para>
 
       <para>
-        <example><title>મુખ્ય દસ્તાવેજ મથાળુ</title>
+        <example><title>Master document header</title>
           <programlisting>
 <![CDATA[
 <bookinfo>
@@ -1342,7 +1383,7 @@ gtk_arrow_get_type
     </sect1>
 
     <sect1 id="metafiles_sections">
-      <title>વિભાગ ફાઇલને સુધારી રહ્યા છે</title>
+      <title>Editing the section file</title>
 
       <para>
         The section file is used to organise the documentation output by
@@ -1351,7 +1392,7 @@ gtk_arrow_get_type
       </para>
 
       <para>
-        The section file is a plain test file with xml like syntax (using tags).
+        The section file is a plain text file with XML-like syntax (using tags).
         Blank lines are ignored and lines starting with a '#' are treated as
         comment lines.
       </para>
@@ -1362,9 +1403,9 @@ gtk_arrow_get_type
         will result in the section declarations being output in the template
         file <filename>tmpl/gnome-config.sgml</filename>, which will be
         converted into the DocBook SGML/XML file <filename>sgml/gnome-config.sgml</filename>
-        or .DocBook XML file <filename>xml/gnome-config.xml</filename>.
-        (The name of the html file is based on the module name and the section
-        title, or for gobjects it is based on the gobjects class name converted
+        or the DocBook XML file <filename>xml/gnome-config.xml</filename>.
+        (The name of the HTML file is based on the module name and the section
+        title, or for GObjects it is based on the GObjects class name converted
         to lower case).
       </para>
 
@@ -1384,12 +1425,12 @@ gtk_arrow_get_type
         G_OBJECT(), G_IS_OBJECT() etc.).
         Currently these are left out of the documentation.
         You can also use &lt;SUBSECTION Private&gt; for private declarations
-        which will not be output (It is a handy way to avoid warning messages
-        about unused declarations.).
+        which will not be output (it is a handy way to avoid warning messages
+        about unused declarations).
         If your library contains private types which you don't want to appear in
         the object hierarchy and the list of implemented or required interfaces,
         add them to a Private subsection.
-        Wheter you would place GObject and GObjectClass like structs in public
+        Whether you would place GObject and GObjectClass like structs in public
         or Standard section depends if they have public entries (variables,
         vmethods).
       </para>
@@ -1408,7 +1449,7 @@ gtk_arrow_get_type
   </chapter>
 
   <chapter id="reports">
-    <title>પરિણામને નિયંત્રણ કરી રહ્યા છે</title>
+    <title>Controlling the result</title>
 
     <para>
       A GTK-Doc run generates report files inside the documentation directory.
@@ -1428,24 +1469,49 @@ gtk_arrow_get_type
       added.
     </para>
 
-    <para><filename>&lt;package&gt;-sections.txt</filename> માં આપેલ સંકેતોને <filename>&lt;package&gt;-undeclared.txt</filename> એ યાદી કરે છે પરંતુ સ્ત્રોતોમાં મળ્યુ નથી. ચકાસો જો તેઓને દૂર કરી દેવામાં આવી રહ્યુ છે અથવા જો તેઓની જોડણી થયેલ નથી.</para>
+    <para>
+      The <filename>&lt;package&gt;-undeclared.txt</filename> file lists symbols
+      given in the <filename>&lt;package&gt;-sections.txt</filename> but not
+      found in the sources. Check if they have been removed or if they are
+      misspelled.
+    </para>
 
-    <para><filename>&lt;package&gt;-unused.txt</filename> ફાઇલ એ સંકેત નામોની યાદી કરે છે, જ્યાં GTK-Doc સ્કેનર એ દસ્તાવેજીકરણને શોધ્યુ હતુ, પરંતુ જાણતા નથી ક્યાં તેને મૂકવાનું. આનો મતલબ એ કે સંકેતને હજુ <filename>&lt;package&gt;-sections.txt</filename> ફાઇલ માં ઉમેરી દેવામાં આવ્યા નથી.</para>
+    <para>
+      The <filename>&lt;package&gt;-unused.txt</filename> file lists symbol
+      names, where the GTK-Doc scanner has found documentation, but does not
+      know where to put it. This means that the symbol has not yet been added to
+      the <filename>&lt;package&gt;-sections.txt</filename> file.
+    </para>
 
     <tip>
-      <para>સક્રિય કરો અથવા Makefile.am માં <option>TESTS=$(GTKDOC_CHECK)</option> વાક્ય ને ઉમેરો. જો ઓછામાં ઓછુ GTK-Doc 1.9 સ્થાપિત થયેલ હોય તો, આ <command>make check</command> ને ચલાવવા દરમ્યાન સેનિટિ ચકાસણીને ચલાવશે.</para>
+      <para>
+        Enable or add the <option>TESTS=$(GTKDOC_CHECK)</option> line in Makefile.am.
+        If at least GTK-Doc 1.9 is installed, this will run sanity checks during
+        <command>make check</command> run.
+      </para>
     </tip>
 
     <para>
       One can also look at the files produced by the source code scanner:
       <filename>&lt;package&gt;-decl-list.txt</filename> and
       <filename>&lt;package&gt;-decl.txt</filename>. The first one can be
-      compared with the section file if that is manualy maintained. The second
-      lists all declarations fromt he headers If a symbol is missing one could
+      compared with the section file if that is manually maintained. The second
+      lists all declarations from the headers. If a symbol is missing one could
       check if this file contains it.
     </para>
 
-    <para>જો પ્રોજેક્ટ એ GObject આધારિત હોય તો, એક ઓબ્જેક્ટ સ્કેનર દ્દારા ઉત્પન્ન થયેલ ફાઇલોમાં પણ જોઇ શકો છો: <filename>&lt;package&gt;.args.txt</filename>, <filename>&lt;package&gt;.hierarchy.txt</filename>, <filename>&lt;package&gt;.interfaces.txt</filename>, <filename>&lt;package&gt;.prerequisites.txt</filename> અને <filename>&lt;package&gt;.signals.txt</filename>. જો ત્યાં પેલાનાં કોઇપણમાં ગુમ થયેલ સંકેતો છે તો, આગળ પૃથ્થકરણ માટે અંતર્માધ્યમ સ્કેનર ફાઇલને રાખવા માટે એકજણ gtkdoc ને પૂછી શકે છે, પરંતુ <command>GTK_DOC_KEEP_INTERMEDIATE=1 make</command> તરીકે તેને ચલાવી રહ્યા છે.</para>
+    <para>
+      If the project is GObject based, one can also look into the files produced
+      by the object scanner:
+      <filename>&lt;package&gt;.args.txt</filename>,
+      <filename>&lt;package&gt;.hierarchy.txt</filename>,
+      <filename>&lt;package&gt;.interfaces.txt</filename>,
+      <filename>&lt;package&gt;.prerequisites.txt</filename> and
+      <filename>&lt;package&gt;.signals.txt</filename>. If there are missing
+      symbols in any of those, one can ask gtkdoc to keep the intermediate scanner
+      file for further analysis, by running it as
+      <command>GTK_DOC_KEEP_INTERMEDIATE=1 make</command>.
+    </para>
   </chapter>
 
   <chapter id="documenting-others">
@@ -1458,7 +1524,7 @@ gtk_arrow_get_type
     </para>
 
     <sect1 id="commandline-interfaces">
-      <title>Commandline options and man pages</title>
+      <title>Command line options and man pages</title>
 
       <para>
         As one can generate man pages for a docbook refentry as well, it sounds
@@ -1542,15 +1608,21 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
 
     <segmentedlist>
       <?dbhtml list-presentation="list"?>
-      <segtitle>પ્રશ્ર્ન</segtitle>
-      <segtitle>જવાબ</segtitle>
+      <segtitle>Question</segtitle>
+      <segtitle>Answer</segtitle>
       <seglistitem>
-        <seg>વર્ગની શ્રેણી નથી.</seg>
-        <seg>ઓબ્જેક્ટો એ ફાઇલ <function>xxx_get_type()</function> માં દાખલ કરી દેવામાં આવ્યુ નથી <filename>&lt;package&gt;.types</filename></seg>
+        <seg>No class hierarchy.</seg>
+        <seg>
+          The objects <function>xxx_get_type()</function> function has not been
+          entered into the <filename>&lt;package&gt;.types</filename> file.
+        </seg>
       </seglistitem>
       <seglistitem>
-        <seg>હજુ વર્ગ શ્રેણી નથી.</seg>
-        <seg><filename>&lt;package&gt;-sections.txt</filename> ફાઇલમાં ગુમ થયેલ અથવા ખોટુ નામ (જુઓ <ulink url="http://mail.gnome.org/archives/gtk-doc-list/2003-October/msg00006.html">વિગતવાર</ulink>).</seg>
+        <seg>Still no class hierarchy.</seg>
+        <seg>
+          Missing or wrong naming in <filename>&lt;package&gt;-sections.txt</filename>
+          file (see <ulink url="http://mail.gnome.org/archives/gtk-doc-list/2003-October/msg00006.html">explanation</ulink>).
+        </seg>
       </seglistitem>
       <seglistitem>
         <seg>Damn, I have still no class hierarchy.</seg>
@@ -1561,25 +1633,28 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
         </seg>
       </seglistitem>
       <seglistitem>
-        <seg>સંકેત અનુક્રમણિકા નથી.</seg>
+        <seg>No symbol index.</seg>
         <seg>
           Does the <filename>&lt;package&gt;-docs.{xml,sgml}</filename> contain a
           index that xi:includes the generated index?
         </seg>
       </seglistitem>
       <seglistitem>
-        <seg>સંકેતો એ તેનાં દસ્તાવેજ-વિભાગમાં કડી થયેલ નથી.</seg>
+        <seg>Symbols are not linked to their doc-section.</seg>
         <seg>
           Is the doc-comment using the correct markup (added #,% or ())?
           Check if the gtkdoc-fixxref warns about unresolvable xrefs.
         </seg>
       </seglistitem>
       <seglistitem>
-        <seg>નવો વર્ગ એ દસ્તાવેજોમાં દેખાતો નથી.</seg>
-        <seg>શું તે નવુ પાનું xi છે: <filename>&lt;package&gt;-docs.{xml,sgml}</filename> માંથી સમાવેલ છે.</seg>
+        <seg>A new class does not appear in the docs.</seg>
+        <seg>
+          Is the new page xi:included from
+          <filename>&lt;package&gt;-docs.{xml,sgml}</filename>.
+        </seg>
       </seglistitem>
       <seglistitem>
-        <seg>નવો સંકેત એ દસ્તાવેજોમાં દેખાતુ નથી.</seg>
+        <seg>A new symbol does not appear in the docs.</seg>
         <seg>
           Is the doc-comment properly formatted. Check for spelling mistakes in
           the begin of the comment. Check if the gtkdoc-fixxref warns about
@@ -1588,7 +1663,7 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
         </seg>
       </seglistitem>
       <seglistitem>
-        <seg>પ્રકાર એ વર્ગ શ્રેણામાંથી ગુમ થયેલ છે.</seg>
+        <seg>A type is missing from the class hierarchy.</seg>
         <seg>
           If the type is listed in <filename>&lt;package&gt;.hierarchy</filename>
           but not in <filename>xml/tree_index.sgml</filename> then double check
@@ -1598,20 +1673,23 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
         </seg>
       </seglistitem>
       <seglistitem>
-        <seg>બધા gobject ઍનોટેશન માટે foldoc કડીઓ મને મળે છે.</seg>
-        <seg>ચકાસો કે જે <filename>xml/annotation-glossary.xml</filename> એ xi છે: <filename>&lt;package&gt;-docs.{xml,sgml}</filename> માંથી સમાવેલ છે.</seg>
+        <seg>I get foldoc links for all gobject annotations.</seg>
+        <seg>
+          Check that <filename>xml/annotation-glossary.xml</filename> is
+          xi:included from <filename>&lt;package&gt;-docs.{xml,sgml}</filename>.
+        </seg>
       </seglistitem>
 
       <!-- gtk-doc warnings: -->
       <seglistitem>
-        <seg>સ્ત્રોત કોડ ટિપ્પણી બ્લોકમાં પરિમાણ વર્ણવેલ છે પરંતુ અસ્તિત્વ ધરાવતુ નથી</seg>
-        <seg>ચકાસો જો મથાળામાં પ્રોટોટાઇપ પાસે સ્ત્રોતમાં વિવિધ પરિમાણ નામો છે.</seg>
+        <seg>Parameter described in source code comment block but does not exist</seg>
+        <seg>Check if the prototype in the header has different parameter names as in the source.</seg>
       </seglistitem>
 
       <!-- docbook warnings: -->
       <seglistitem>
         <seg>multiple "IDs" for constraint linkend: XYZ</seg>
-        <seg>સંકેત XYZ એ <filename>&lt;package&gt;-sections.txt</filename> ફાઇલમાં બે વાર દેખાય છે.</seg>
+        <seg>Symbol XYZ appears twice in <filename>&lt;package&gt;-sections.txt</filename> file.</seg>
       </seglistitem>
       <seglistitem>
         <seg>Element typename in namespace '' encountered in para, but no template matches.</seg>
@@ -1625,12 +1703,12 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
 
     <para>
       GtkDocPlugin - a <ulink url="http://trac-hacks.org/wiki/GtkDocPlugin">Trac GTK-Doc</ulink>
-      integration plugin, that adds api docs to a trac site and integrates with
+      integration plugin, that adds API docs to a trac site and integrates with
       the trac search.
     </para>
     <para>
       Gtkdoc-depscan - a tool (part of gtk-doc) to check used API against since
-      tags in the api to determine the minimum required version.
+      tags in the API to determine the minimum required version.
     </para>
 
   </chapter>
@@ -1647,12 +1725,20 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
 
 <appendix id="fdl">
   <appendixinfo>
-    <releaseinfo>Version 1.1, March 2000</releaseinfo>
+    <releaseinfo>
+      Version 1.1, March 2000
+    </releaseinfo>
     <copyright>
       <year>2000</year><holder>Free Software Foundation, Inc.</holder>
     </copyright>
     <legalnotice id="fdl-legalnotice">
-      <para><address>Free Software Foundation, Inc. <street>51 Franklin Street, Suite 330</street>, <city>Boston</city>, <state>MA</state><postcode>02110-1301</postcode><country>USA</country></address> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.</para>
+      <para>
+	<address>Free Software Foundation, Inc. <street>51 Franklin Street, 
+        Suite 330</street>, <city>Boston</city>, <state>MA</state>  
+        <postcode>02110-1301</postcode>  <country>USA</country></address> 
+	Everyone is permitted to copy and distribute verbatim copies of this 
+        license document, but changing it is not allowed.
+      </para>
     </legalnotice>
   </appendixinfo>
   <title>GNU Free Documentation License</title>
@@ -1902,7 +1988,9 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
       <listitem>
 	<formalpara>
 	  <title>D</title>
-	  <para><link linkend="fdl-document">દસ્તાવેજ</link> ની કોપીરાઇટ બધી સૂચનાઓને સાચવો.</para>
+	  <para>
+	    Preserve all the copyright notices of the <link linkend="fdl-document">Document</link>.
+	  </para>
 	</formalpara>
       </listitem>
       
@@ -1943,7 +2031,9 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
       <listitem>
 	<formalpara>
 	  <title>H</title>
-	  <para>આ લાઇસન્સની ચેતવણી ન થયેલ નકલને સમાવો.</para>
+	  <para>
+	    Include an unaltered copy of this License.
+	  </para>
 	</formalpara>
       </listitem>
       
@@ -1953,7 +2043,7 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
 	  <para>
 	    Preserve the section entitled <quote>History</quote>, and
 	    its title, and add to it an item stating at least the
-	    title, year, new authors, and publisher of the <link linkend="fdl-modified">Modified Version </link>as given on
+	    title, year, new authors, and publisher of the <link linkend="fdl-modified">Modified Version</link> as given on
 	    the <link linkend="fdl-title-page">Title Page</link>.  If
 	    there is no section entitled <quote>History</quote> in the
 	    <link linkend="fdl-document">Document</link>, create one
@@ -2181,7 +2271,13 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
     
   <sect1 id="fdl-section10">
     <title>10. FUTURE REVISIONS OF THIS LICENSE</title>
-    <para>The <ulink type="http" url="http://www.gnu.org/fsf/fsf.html">Free Software Foundation</ulink> may publish new, revised versions of the GNU Free Documentation License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns. See <ulink type="http" url="http://www.gnu.org/copyleft">http://www.gnu.org/copyleft/</ulink>.</para>
+    <para>
+      The <ulink type="http" url="http://www.gnu.org/fsf/fsf.html">Free Software
+      Foundation</ulink> may publish new, revised versions of the GNU
+      Free Documentation License from time to time. Such new versions
+      will be similar in spirit to the present version, but may differ
+      in detail to address new problems or concerns. See <ulink type="http" url="http://www.gnu.org/copyleft">http://www.gnu.org/copyleft/</ulink>.
+    </para>
     
     <para>
       Each version of the License is given a distinguishing version
@@ -2199,10 +2295,16 @@ http://cgit.freedesktop.org/DeviceKit/DeviceKit/tree/doc/dbus)
 
   <sect1 id="fdl-using">
     <title>Addendum</title>
-    <para>તમે લખેલ છે તે દસ્તાવેજમાં આ લાઇસન્સને વાપરવા માટે, દસ્તાવેજમાં લાઇસન્સની નકલને સમાવો અને નીચેનાં કોપીરાઇટ અને લાઇસન્સ સૂચનાઓને શીર્ષક પાનાં પછી મૂકો:</para>
+    <para>
+      To use this License in a document you have written, include a copy of
+      the License in the document and put the following copyright and
+      license notices just after the title page:
+    </para>
     
     <blockquote>
-      <para>Copyright YEAR YOUR NAME.</para>
+      <para>
+	Copyright YEAR YOUR NAME.
+      </para>
       <para>
 	Permission is granted to copy, distribute and/or modify this
 	document under the terms of the GNU Free Documentation

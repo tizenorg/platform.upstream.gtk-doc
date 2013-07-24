@@ -460,4 +460,27 @@ const char* const BUG_656773c = "bug";
  */
 extern short int BUG_656946;
 
+#ifndef G_GNUC_DEPRECATED
+#define G_GNUC_DEPRECATED
+#endif
+#ifndef G_GNUC_DEPRECATED_FOR
+#define G_GNUC_DEPRECATED_FOR(a)
+#endif
+
+void bug_624001a(void) G_GNUC_DEPRECATED;
+void bug_624001b(void) G_GNUC_DEPRECATED_FOR(bug_624001a);
+
+G_GNUC_DEPRECATED
+void bug_624001c(void);
+
+G_GNUC_DEPRECATED_FOR(bug_624001c)
+void bug_624001d(void);
+
+#ifndef GLIB_DEPRECATED
+#define GLIB_DEPRECATED
+#endif
+
+GLIB_DEPRECATED
+void bug_624001e (void);
+
 #endif // GTKDOC_TESTER_H
