@@ -300,10 +300,11 @@ $PreProcessorDirectives{"warning"} = 1;
 my %AnnotationsUsed;
 
 # the annotations are defined at:
-# http://live.gnome.org/GObjectIntrospection/Annotations
+# https://live.gnome.org/GObjectIntrospection/Annotations
 my %AnnotationDefinition = (
     'allow-none' => "NULL is ok, both for passing and for returning.",
     'array' => "Parameter points to an array of items.",
+    'attribute' => "Free-form custom annotation.",
     'closure' => "This parameter is a 'user_data', for callbacks; many bindings can pass NULL here.",
     'default' => "Default parameter value (for in case the <acronym>shadows</acronym>-to function has less parameters).",
     'element-type' => "Generics and defining elements of containers and arrays.",
@@ -313,13 +314,17 @@ my %AnnotationDefinition = (
     'in-out' => "Parameter for input and for returning results. Default is <acronym>transfer full</acronym>.",
     'not-error' => "A GError parameter is not to be handled like a normal GError.",
     'out' => "Parameter for returning results. Default is <acronym>transfer full</acronym>.",
+    'out caller-allocates' => "Out parameter, where caller must allocate storage.",
+    'out callee-allocates' => "Out parameter, where caller must allocate storage.",
     'transfer container' => "Free data container after the code is done.",
+    'transfer floating' => "Alias for <acronym>transfer none</acronym>, used for objects with floating refs.",
     'transfer full' => "Free data after the code is done.",
     'transfer none' => "Don't free data after the code is done.",
     'scope call' => "The callback is valid only during the call to the method.",
     'scope async' => "The callback is valid until first called.",
     'scope notified' => "The callback is valid until the GDestroyNotify argument is called.",
-    'type' => "Override the parsed C type with given type"
+    'skip' => "Exposed in C code, not necessarily available in other languages.",
+    'type' => "Override the parsed C type with given type."
 );
 
 # Create the root DocBook output directory if it doens't exist.
@@ -482,6 +487,24 @@ EOF
     &UpdateFileIfChanged ($old_object_index, $new_object_index, 0);
 }
 
+#############################################################################
+# Function    : TrimTextBlock
+# Description : Trims extra whitespace. Empty lines inside a block are
+#                preserved.
+# Arguments   : $desc - the text block to trim. May contain newlines.
+#############################################################################
+
+sub TrimTextBlock {
+  my ($desc) = @_;
+  
+  # strip leading spaces on the block
+  $desc =~ s/^\s+//s;
+  # strip trailing spaces on every line
+  $desc =~ s/\s+$/\n/mg;
+  
+  return $desc;
+}
+
 
 #############################################################################
 # Function    : OutputSGML
@@ -619,9 +642,7 @@ sub OutputSGML {
 ${signals_synop}</synopsis>
 </refsect1>
 EOF
-                     $signals_desc =~ s/^\n*//g;
-                     $signals_desc =~ s/\n+$/\n/g;
-                     $signals_desc =~ s/(\s|\n)+$//ms;
+                     $signals_desc = TrimTextBlock($signals_desc);
                     $signals_desc  = <<EOF;
 <refsect1 id="$section_id.signal-details" role="signals">
 <title role="signals.title">Signal Details</title>
@@ -640,9 +661,7 @@ EOF
 ${args_synop}</synopsis>
 </refsect1>
 EOF
-                     $args_desc =~ s/^\n*//g;
-                     $args_desc =~ s/\n+$/\n/g;
-                     $args_desc =~ s/(\s|\n)+$//ms;
+                     $args_desc = TrimTextBlock($args_desc);
                     $args_desc  = <<EOF;
 <refsect1 id="$section_id.property-details" role="property_details">
 <title role="property_details.title">Property Details</title>
@@ -661,10 +680,8 @@ EOF
 ${child_args_synop}</synopsis>
 </refsect1>
 EOF
-                     $child_args_desc =~ s/^\n*//g;
-                     $child_args_desc =~ s/\n+$/\n/g;
-                     $child_args_desc =~ s/(\s|\n)+$//ms;
-                    $args_desc .= <<EOF;
+                     $child_args_desc = TrimTextBlock($child_args_desc);
+                     $args_desc .= <<EOF;
 <refsect1 id="$section_id.child-property-details" role="child_property_details">
 <title role="child_property_details.title">Child Property Details</title>
 $child_args_desc
@@ -682,9 +699,7 @@ EOF
 ${style_args_synop}</synopsis>
 </refsect1>
 EOF
-                     $style_args_desc =~ s/^\n*//g;
-                     $style_args_desc =~ s/\n+$/\n/g;
-                     $style_args_desc =~ s/(\s|\n)+$//ms;
+                     $style_args_desc = TrimTextBlock($style_args_desc);
                     $args_desc .= <<EOF;
 <refsect1 id="$section_id.style-property-details" role="style_properties_details">
 <title role="style_properties_details.title">Style Property Details</title>
@@ -693,9 +708,7 @@ $style_args_desc
 EOF
                 }
 
-                 $hierarchy =~ s/^\n*//g;
-                 $hierarchy =~ s/\n+$/\n/g;
-                 $hierarchy =~ s/(\s|\n)+$//ms;
+                 $hierarchy = TrimTextBlock($hierarchy);
                 if ($hierarchy ne "") {
                     $hierarchy = <<EOF;
 <refsect1 id="$section_id.object-hierarchy" role="object_hierarchy">
@@ -705,9 +718,7 @@ $hierarchy
 EOF
                 }
 
-                 $interfaces =~ s/^\n*//g;
-                 $interfaces =~ s/\n+$/\n/g;
-                 $interfaces =~ s/(\s|\n)+$//ms;
+                 $interfaces =~ TrimTextBlock($interfaces);
                 if ($interfaces ne "") {
                     $interfaces = <<EOF;
 <refsect1 id="$section_id.implemented-interfaces" role="impl_interfaces">
@@ -717,9 +728,7 @@ $interfaces
 EOF
                 }
 
-                 $implementations =~ s/^\n*//g;
-                 $implementations =~ s/\n+$/\n/g;
-                 $implementations =~ s/(\s|\n)+$//ms;
+                 $implementations = TrimTextBlock($implementations);
                 if ($implementations ne "") {
                     $implementations = <<EOF;
 <refsect1 id="$section_id.implementations" role="implementations">
@@ -729,9 +738,7 @@ $implementations
 EOF
                 }
 
-                 $prerequisites =~ s/^\n*//g;
-                 $prerequisites =~ s/\n+$/\n/g;
-                 $prerequisites =~ s/(\s|\n)+$//ms;
+                 $prerequisites = TrimTextBlock($prerequisites);
                 if ($prerequisites ne "") {
                     $prerequisites = <<EOF;
 <refsect1 id="$section_id.prerequisites" role="prerequisites">
@@ -741,9 +748,7 @@ $prerequisites
 EOF
                 }
 
-                 $derived =~ s/^\n*//g;
-                 $derived =~ s/\n+$/\n/g;
-                 $derived =~ s/(\s|\n)+$//ms;
+                 $derived = TrimTextBlock($derived);
                 if ($derived ne "") {
                     $derived = <<EOF;
 <refsect1 id="$section_id.derived-interfaces" role="derived_interfaces">
@@ -1863,8 +1868,8 @@ sub OutputEnum {
     my @fields = ParseEnumDeclaration($declaration);
     my $params = $SymbolParams{$symbol};
 
-    # If no parameters are filled in, we don't generate the description
-    # table, for backwards compatibility
+    # If nothing at all is documented log a single summary warning at the end.
+    # Otherwise, warn about each undocumented item.
 
     my $found = 0;
     if (defined $params) {
@@ -1876,56 +1881,57 @@ sub OutputEnum {
         }
     }
 
-    if ($found) {
-        my %field_descrs = @$params;
-        my $missing_parameters = "";
-        my $unused_parameters = "";
+    my %field_descrs = (defined $params ? @$params : ());
+    my $missing_parameters = "";
+    my $unused_parameters = "";
 
-        $desc .= "<variablelist role=\"enum\">\n";
-        for my $field_name (@fields) {
-            my $field_descr = $field_descrs{$field_name};
-            my $param_annotations = "";
+    $desc .= "<variablelist role=\"enum\">\n";
+    for my $field_name (@fields) {
+        my $field_descr = $field_descrs{$field_name};
+        my $param_annotations = "";
 
-            $id = &CreateValidSGMLID ($field_name);
-            $condition = &MakeConditionDescription ($field_name);
-            $desc .= "<varlistentry id=\"$id\" role=\"constant\"$condition>\n<term><literal>$field_name</literal></term>\n";
-            if (defined $field_descr) {
-                ($field_descr,$param_annotations) = &ExpandAnnotation($symbol, $field_descr);
-                $field_descr = &ExpandAbbreviations($symbol, $field_descr);
-                $desc .= "<listitem><simpara>$field_descr$param_annotations</simpara></listitem>\n";
-                delete $field_descrs{$field_name};
-            } else {
+        $id = &CreateValidSGMLID ($field_name);
+        $condition = &MakeConditionDescription ($field_name);
+        $desc .= "<varlistentry id=\"$id\" role=\"constant\"$condition>\n<term><literal>$field_name</literal></term>\n";
+        if (defined $field_descr) {
+            ($field_descr,$param_annotations) = &ExpandAnnotation($symbol, $field_descr);
+            $field_descr = &ExpandAbbreviations($symbol, $field_descr);
+            $desc .= "<listitem><simpara>$field_descr$param_annotations</simpara></listitem>\n";
+            delete $field_descrs{$field_name};
+        } else {
+            if ($found) {
                 &LogWarning (&GetSymbolSourceFile ($symbol), &GetSymbolSourceLine($symbol),
                     "Value description for $symbol"."::"."$field_name is missing in source code comment block.");
                 if ($missing_parameters ne "") {
-                  $missing_parameters .= ", ".$field_name;
+                    $missing_parameters .= ", ".$field_name;
                 } else {
                     $missing_parameters = $field_name;
                 }
-                $desc .= "<listitem />\n";
             }
-            $desc .= "</varlistentry>\n";
+            $desc .= "<listitem />\n";
         }
-        $desc .= "</variablelist>";
-        foreach my $field_name (keys %field_descrs) {
-            &LogWarning (&GetSymbolSourceFile ($symbol), &GetSymbolSourceLine($symbol),
-                "Value description for $symbol"."::"."$field_name is not used from source code comment block.");
-            if ($unused_parameters ne "") {
-              $unused_parameters .= ", ".$field_name;
-            } else {
-               $unused_parameters = $field_name;
-            }
-        }
-
-        # remember missing/unused parameters (needed in tmpl-free build)
-        if (($missing_parameters ne "") and (! exists ($AllIncompleteSymbols{$symbol}))) {
-            $AllIncompleteSymbols{$symbol}=$missing_parameters;
-        }
-        if (($unused_parameters ne "") and (! exists ($AllUnusedSymbols{$symbol}))) {
-            $AllUnusedSymbols{$symbol}=$unused_parameters;
+        $desc .= "</varlistentry>\n";
+    }
+    $desc .= "</variablelist>";
+    foreach my $field_name (keys %field_descrs) {
+        &LogWarning (&GetSymbolSourceFile ($symbol), &GetSymbolSourceLine($symbol),
+            "Value description for $symbol"."::"."$field_name is not used from source code comment block.");
+        if ($unused_parameters ne "") {
+            $unused_parameters .= ", ".$field_name;
+        } else {
+            $unused_parameters = $field_name;
         }
     }
-    else {
+
+    # remember missing/unused parameters (needed in tmpl-free build)
+    if (($missing_parameters ne "") and (! exists ($AllIncompleteSymbols{$symbol}))) {
+        $AllIncompleteSymbols{$symbol}=$missing_parameters;
+    }
+    if (($unused_parameters ne "") and (! exists ($AllUnusedSymbols{$symbol}))) {
+        $AllUnusedSymbols{$symbol}=$unused_parameters;
+    }
+
+    if (!$found) {
         if (scalar(@fields) > 0) {
             if (! exists ($AllIncompleteSymbols{$symbol})) {
                 $AllIncompleteSymbols{$symbol}="<items>";
@@ -2757,14 +2763,14 @@ sub ExpandAbbreviations {
 }
 
 
-# Returns the end tag corresponding to the given start tag.
+# Returns the end tag (as a regexp) corresponding to the given start tag.
 sub ExpandAbbreviationsEndTag {
   my ($start_tag) = @_;
 
   if ($start_tag eq "<!\[CDATA\[") {
     return "]]>";
   } elsif ($start_tag eq "<!DOCTYPE") {
-    return "]>";
+    return ">";
   } elsif ($start_tag =~ m/<(\w+)/) {
     return "</$1>";
   }
@@ -2883,7 +2889,7 @@ sub MakeHashXRef {
 #                      e.g. "<!\\[CDATA\\[|<programlisting[^>]*>" to match
 #                      CDATA sections or programlisting elements.
 #               $end_tag_func - function which is passed the matched start tag
-#                      and should return the appropriate end tag string.
+#                      and should return the appropriate end tag string regexp.
 #               $callback - callback called with each part of the text. It is
 #                      called with a piece of text, the symbol being
 #                      documented, and the matched start tag or "" if the text
@@ -2902,7 +2908,7 @@ sub ModifyXMLElements {
       $result .= &$callback ($before_tag, $symbol, "");
       $result .= $start_tag;
 
-      # get the mathing end-tag for current tag
+      # get the matching end-tag for current tag
       $end_tag_regexp = &$end_tag_func ($start_tag);
 
       if ($text =~ m/$end_tag_regexp/s) {
@@ -3747,7 +3753,7 @@ sub ScanSourceFile {
         || die "Can't open $file: $!";
     my $in_comment_block = 0;
     my $symbol;
-    my ($in_description, $in_return, $in_since, $in_stability, $in_deprecated);
+    my $in_part = "";
     my ($description, $return_desc, $return_start, $return_style);
     my ($since_desc, $stability_desc, $deprecated_desc);
     my $current_param;
@@ -3765,11 +3771,7 @@ sub ScanSourceFile {
 
                 # Reset all the symbol data.
                 $symbol = "";
-                $in_description = 0;
-                $in_return = 0;
-                $in_since = 0;
-                $in_deprecated = 0;
-                $in_stability = 0;
+                $in_part = "";
                 $description = "";
                 $return_desc = "";
                 $return_style = "";
@@ -3811,7 +3813,7 @@ sub ScanSourceFile {
 
                     if (scalar %KnownSymbols) {
                         if ((! defined($KnownSymbols{"$TMPL_DIR/$real_symbol:Long_Description"})) || $KnownSymbols{"$TMPL_DIR/$real_symbol:Long_Description"} != 1) {
-                            &LogWarning ($file, $., "Section $real_symbol is not defined in the $MODULE-section.txt file.");
+                            &LogWarning ($file, $., "Section $real_symbol is not defined in the $MODULE-sections.txt file.");
                         }
                     }
 
@@ -3915,197 +3917,70 @@ sub ScanSourceFile {
             next;
         }
 
-        # FIXME: flip this around
-        # instead of repeating the other parts, just have them once and
-        # do if(!$in_return) { ... }
-        # also maybe have in_part="description,return,since,deprecated,stability,..."
-
-        # If we're in the return value description, add it to the end.
-        if ($in_return) {
-            # If we find another valid returns line, we assume that the first
-            # one was really part of the description.
-            if (m/^\s*(returns:|return\s+value:)/i) {
-                if ($return_style eq 'broken') {
-                    $description .= $return_start . $return_desc;
-                }
-                $return_start = $1;
-                if ($return_style eq 'sane') {
-                    &LogWarning ($file, $., "Multiple Returns for $symbol.");
-                }
-                $return_style = 'sane';
-                $ignore_broken_returns = 1;
-                $return_desc = $';
-            } elsif (!$ignore_broken_returns && m/^\s*(returns\b\s*)/i) {
-                $description .= $return_start . $return_desc;
-                $return_start = $1;
-                $return_style = 'broken';
-                $return_desc = $';
-            } elsif (m%^\s*since:%i) {
-                $since_desc = $';
-                $in_since = 1;
-                $in_return = 0;
-            } elsif (m%^\s*stability:%i) {
-                $stability_desc = $';
-                $in_stability = 1;
-                $in_return = 0;
-            } elsif (m%^\s*deprecated:%i) {
-                $deprecated_desc = $';
-                $in_deprecated = 1;
-                $in_return = 0;
-            } else {
-                $return_desc .= $_;
-            }
-            next;
-        }
-
-        if ($in_since) {
-            if (m/^\s*(returns:|return\s+value:)/i) {
-                if ($return_style eq 'broken') {
-                    $description .= $return_start . $return_desc;
-                }
-                $return_start = $1;
-                if ($return_style eq 'sane') {
-                    &LogWarning ($file, $., "Multiple Returns for $symbol.");
-                }
-                $return_style = 'sane';
-                $ignore_broken_returns = 1;
-                $return_desc = $';
-                $in_return = 1;
-                $in_since = 0;
-            } elsif (!$ignore_broken_returns && m/^\s*(returns\b\s*)/i) {
-                $return_start = $1;
-                $return_style = 'broken';
-                $return_desc = $';
-                $in_return = 1;
-                $in_since = 0;
-            } elsif (m%^\s*deprecated:%i) {
-                $deprecated_desc = $';
-                $in_deprecated = 1;
-                $in_since = 0;
-            } elsif (m%^\s*stability:%i) {
-                $stability_desc = $';
-                $in_stability = 1;
-                $in_since = 0;
-            } else {
-                $since_desc .= $_;
-            }
-            next;
-        }
-
-        if ($in_stability) {
-            if (m/^\s*(returns:|return\s+value:)/i) {
-                if ($return_style eq 'broken') {
-                    $description .= $return_start . $return_desc;
-                }
-                $return_start = $1;
-                if ($return_style eq 'sane') {
-                    &LogWarning ($file, $., "Multiple Returns for $symbol.");
-                }
-                $return_style = 'sane';
-                $ignore_broken_returns = 1;
-                $return_desc = $';
-                $in_return = 1;
-                $in_stability = 0;
-            } elsif (!$ignore_broken_returns && m/^\s*(returns\b\s*)/i) {
-                $return_start = $1;
-                $return_style = 'broken';
-                $return_desc = $';
-                $in_return = 1;
-                $in_stability = 0;
-            } elsif (m%^\s*deprecated:%i) {
-                $deprecated_desc = $';
-                $in_deprecated = 1;
-                $in_stability = 0;
-            } elsif (m%^\s*since:%i) {
-                $since_desc = $';
-                $in_since = 1;
-                $in_stability = 0;
-            } else {
-                $stability_desc .= $_;
-            }
-            next;
-        }
-
-        if ($in_deprecated) {
-            if (m/^\s*(returns:|return\s+value:)/i) {
-                if ($return_style eq 'broken') {
-                    $description .= $return_start . $return_desc;
-                }
-                $return_start = $1;
-                if ($return_style eq 'sane') {
-                    &LogWarning ($file, $., "Multiple Returns for $symbol.");
-                }
-                $return_style = 'sane';
-                $ignore_broken_returns = 1;
-                $return_desc = $';
-                $in_return = 1;
-                $in_deprecated = 0;
-            } elsif (!$ignore_broken_returns && m/^\s*(returns\b\s*)/i) {
-                $return_start = $1;
-                $return_style = 'broken';
-                $return_desc = $';
-                $in_return = 1;
-                $in_deprecated = 0;
-            } elsif (m%^\s*since:%i) {
-                $since_desc = $';
-                $in_since = 1;
-                $in_deprecated = 0;
-            } elsif (m%^\s*stability:%i) {
-                $stability_desc = $';
-                $in_stability = 1;
-                $in_deprecated = 0;
-            } else {
-                $deprecated_desc .= $_;
-            }
-            next;
-        }
-
-        # If we're in the description part, check for the 'Returns:' line.
-        # If that isn't found, add the text to the end.
-        if ($in_description) {
+        if ($in_part eq "description") {
             # Get rid of 'Description:'
             s%^\s*Description:%%;
+        }
 
-            if (m/^\s*(returns:|return\s+value:)/i) {
-                if ($return_style eq 'broken') {
-                    $description .= $return_start . $return_desc;
-                }
-                $return_start = $1;
-                if ($return_style eq 'sane') {
-                    &LogWarning ($file, $., "Multiple Returns for $symbol.");
-                }
-                $return_style = 'sane';
-                $ignore_broken_returns = 1;
-                $return_desc = $';
-                $in_return = 1;
-                next;
-            } elsif (!$ignore_broken_returns && m/^\s*(returns\b\s*)/i) {
-                $return_start = $1;
-                $return_style = 'broken';
-                $return_desc = $';
-                $in_return = 1;
-                next;
-            } elsif (m%^\s*since:%i) {
-                $since_desc = $';
-                $in_since = 1;
-                next;
-            } elsif (m%^\s*deprecated:%i) {
-                $deprecated_desc = $';
-                $in_deprecated = 1;
-                next;
-            } elsif (m%^\s*stability:%i) {
-                $stability_desc = $';
-                $in_stability = 1;
-                next;
+        if (m/^\s*(returns:|return\s+value:)/i) {
+            if ($return_style eq 'broken') {
+                $description .= $return_start . $return_desc;
             }
+            $return_start = $1;
+            if ($return_style eq 'sane') {
+                &LogWarning ($file, $., "Multiple Returns for $symbol.");
+            }
+            $return_style = 'sane';
+            $ignore_broken_returns = 1;
+            $return_desc = $';
+            $in_part = "return";
+            next;
+        } elsif (!$ignore_broken_returns && m/^\s*(returns\b\s*)/i) {
+            $return_start = $1;
+            $return_style = 'broken';
+            $return_desc = $';
+            $in_part = "return";
+            next;
+        } elsif (m%^\s*since:%i) {
+            # we're in param section and have not seen the blank line
+            if($in_part ne "") {
+              $since_desc = $';
+              $in_part = "since";
+              next;
+            }
+        } elsif (m%^\s*deprecated:%i) {
+            # we're in param section and have not seen the blank line
+            if($in_part ne "") {
+              $deprecated_desc = $';
+              $in_part = "deprecated";
+              next;
+            }
+        } elsif (m%^\s*stability:%i) {
+            $stability_desc = $';
+            $in_part = "stability";
+            next;
+        }
 
+        if ($in_part eq "description") {
             $description .= $_;
+            next;
+        } elsif ($in_part eq "return") {
+            $return_desc .= $_;
+            next;
+        } elsif ($in_part eq "since") {
+            $since_desc .= $_;
+            next;
+        } elsif ($in_part eq "stability") {
+            $stability_desc .= $_;
+            next;
+        } elsif ($in_part eq "deprecated") {
+            $deprecated_desc .= $_;
             next;
         }
 
         # We must be in the parameters. Check for the empty line below them.
         if (m%^\s*$%) {
-            $in_description = 1;
+            $in_part = "description";
             next;
         }
 
@@ -4116,7 +3991,7 @@ sub ScanSourceFile {
 
             #print "Found parameter: $param_name\n";
             # Allow varargs variations
-            if ($param_name =~ m/^.*\.\.\.$/) {
+            if ($param_name =~ m/^\.\.\.$/) {
                 $param_name = "...";
             }
             if ("\L$param_name" eq "returns") {
@@ -4708,6 +4583,8 @@ sub ConvertMarkDownCallback {
         $end_of_section= "$end_of_section</refsect2>";
     }
 
+    # TODO(ensonic): it would be nice to add id parameters to the refsect2 elements
+
     # Setext-style headers:
     #          Header 1
     #          ========
@@ -4960,15 +4837,15 @@ sub ReadSignalsFile {
 #############################################################################
 # Function    : ReadTemplateFile
 # Description : This reads in the manually-edited documentation file
-#                corresponding to the file currently being created, so we can
-#                insert the documentation at the appropriate places.
-#                It outputs %SymbolTypes, %SymbolDocs and %SymbolParams, which
-#                is a hash of arrays.
-#                NOTE: This function is duplicated in gtkdoc-mktmpl (but
-#                slightly different).
+#               corresponding to the file currently being created, so we can
+#               insert the documentation at the appropriate places.
+#               It outputs %SymbolTypes, %SymbolDocs and %SymbolParams, which
+#               is a hash of arrays.
+#               NOTE: This function is duplicated in gtkdoc-mktmpl (but
+#               slightly different).
 # Arguments   : $docsfile - the template file to read in.
-#                $skip_unused_params - 1 if the unused parameters should be
-#                        skipped.
+#               $skip_unused_params - 1 if the unused parameters should be
+#                 skipped.
 #############################################################################
 
 sub ReadTemplateFile {
