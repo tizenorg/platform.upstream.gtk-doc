@@ -1,11 +1,11 @@
 Name:           gtk-doc
-Version:        1.18
+Version:        1.19
 Release:        0
 Summary:        GTK+ DocBook Documentation Generator
 License:        GPL-2.0+
 Group:          Productivity/Publishing/SGML
 Url:            http://www.gtk.org/gtk-doc/
-Source:         http://download.gnome.org/sources/gtk-doc/1.18/%{name}-%{version}.tar.bz2
+Source:         http://download.gnome.org/sources/gtk-doc/1.19/%{name}-%{version}.tar.bz2
 BuildRequires:  docbook-xsl-stylesheets
 BuildRequires:  libxml2-tools
 BuildRequires:  libxslt
